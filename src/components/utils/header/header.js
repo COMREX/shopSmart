@@ -1,7 +1,7 @@
-import { Wrapper, FlexWrapper } from "./rectangel.styles";
+import { Wrapper, FlexWrapper } from "./header.styles";
 import SettingsToggle from "../settings-toggle/settingsToggle";
 
-const Rectangle = ({ marginBottom }) => {
+const Header = ({ marginBottom }) => {
   return (
     <Wrapper marginBottom={marginBottom}>
       <FlexWrapper>
@@ -23,4 +23,4 @@ const Rectangle = ({ marginBottom }) => {
   );
 };
 
-export default Rectangle;
+export default Header;

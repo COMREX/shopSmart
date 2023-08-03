@@ -14,16 +14,16 @@ const HomeData = [
   { id: 3, name: "Stores Nearby", imgURL: cover3, path: "discount" },
   {
     id: 4,
-    name: "Search Products",
+    name: "Add Inventory",
     imgURL: cover4,
-    path: "search",
+    path: "add-inventory",
   },
   { id: 5, name: "Stores Nearby", imgURL: cover3, path: "discount" },
   {
     id: 6,
-    name: "Search Products",
+    name: "Add Inventory",
     imgURL: cover4,
-    path: "search",
+    path: "add-inventory",
   },
 ];
 

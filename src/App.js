@@ -8,8 +8,9 @@ import LoginSignupPage from "./pages/loginSignupPage";
 import CustomerContact from "./pages/customerContact";
 import HomePage from "./pages/homePage";
 import MonthlyInventory from "./pages/monthlyInvertoryPage";
+import GroceryListPage from "./pages/groceryListPage";
 import DiscountPage from "./pages/discountPage";
-import SearchProduct from "./pages/searchProduct";
+import AddInventory from "./pages/addInventory";
 import ShoppingPage from "./pages/shoppingPage";
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
         <Route path="/home" Component={HomePage} />
         <Route path="/monthly-inventory" Component={MonthlyInventory} />
         <Route path="/discount" Component={DiscountPage} />
-        <Route path="/search" Component={SearchProduct} />
-        <Route path="/shopping-page" Component={ShoppingPage} />
+        <Route path="/grocery-list" Component={GroceryListPage} />
+        <Route path="/add-inventory" Component={AddInventory} />
+        {/* <Route path="/shopping-page" Component={ShoppingPage} /> */}
         <Route path="customer-services" Component={CustomerContact} />
       </Routes>
     </ThemeProvider>

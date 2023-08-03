@@ -1,4 +1,4 @@
-import Rectangle from "../components/utils/rectangle/rectangle";
+import Header from "../components/utils/header/header";
 import ShopSmartHeading from "../components/utils/shop-smart-heading/shopSmartHeading";
 import QRcode from "../components/utils/qr-code/qrCode";
 import ListItem from "../components/utils/list-Item/listItem";
@@ -28,7 +28,7 @@ const ShoppingPage = () => {
 
   return (
     <>
-      <Rectangle marginBottom="5.3rem" />
+      <Header marginBottom="5.3rem" />
       <ShopSmartHeadingWrappr>
         <ShopSmartHeading marginBottom="3.8rem" />
       </ShopSmartHeadingWrappr>

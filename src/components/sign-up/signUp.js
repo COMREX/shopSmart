@@ -7,7 +7,7 @@ import {
   SignupWrapper,
   Text,
 } from "./signUp.styles";
-import AuthRectangle from "../utils/auth-rectangle/authRectangle";
+import AuthHeader from "../utils/auth-header/authHeader";
 import Input from "../utils/input/input";
 import google from "../../Assets/svgs/google.svg";
 import facebook from "../../Assets/svgs/fb.svg";
@@ -34,7 +34,7 @@ const SignUp = ({ handleClick }) => {
 
   return (
     <SignupWrapper>
-      <AuthRectangle
+      <AuthHeader
         heading="Register your Account"
         paragraph="Fill in the form below correctly"
       />

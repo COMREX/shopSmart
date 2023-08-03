@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Rectangle from "../components/utils/rectangle/rectangle";
+import Header from "../components/utils/header/header";
 import Button from "../components/utils/button/button";
 import Navigation from "../components/utils/navigation/navigation";
 import TextArea from "../components/utils/text-area/textArea";
@@ -42,7 +42,7 @@ const CustomerContact = () => {
 
   return (
     <>
-      <Rectangle />
+      <Header />
       <Form onSubmit={handleSubmit}>
         <ParagraphText>Give Feedback or Contact with Us</ParagraphText>
         <Input

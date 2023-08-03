@@ -1,4 +1,4 @@
-import Rectangle from "../components/utils/rectangle/rectangle";
+import Header from "../components/utils/header/header";
 import ShopSmartHeading from "../components/utils/shop-smart-heading/shopSmartHeading";
 import QRcode from "../components/utils/qr-code/qrCode";
 import SearchInput from "../components/utils/search-input/searchInput";
@@ -15,7 +15,7 @@ import {
 import Button from "../components/utils/button/button";
 import theme from "../theme";
 
-const SearchProduct = () => {
+const AddInventory = () => {
   const [fill, setFill] = useState([]);
 
   const handleClick = (itemId) => {
@@ -28,7 +28,7 @@ const SearchProduct = () => {
 
   return (
     <>
-      <Rectangle marginBottom="4.8rem" />
+      <Header marginBottom="4.8rem" />
       <ShopSmartHeading marginBottom="1.3rem" />
       <QRcodeWrappr>
         <QRcode marginBottom="1.3rem" />
@@ -72,4 +72,4 @@ const SearchProduct = () => {
   );
 };
 
-export default SearchProduct;
+export default AddInventory;

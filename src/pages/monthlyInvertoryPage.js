@@ -1,6 +1,6 @@
 import { SearchWrapper } from "./styles/monthlyInventory.styles";
 
-import Rectangle from "../components/utils/rectangle/rectangle";
+import Header from "../components/utils/header/header";
 import SearchInput from "../components/utils/search-input/searchInput";
 import editSVG from "../Assets/svgs/edit.svg";
 import gridSVG from "../Assets/svgs/grid-icon.svg";
@@ -19,12 +19,12 @@ const MonthlyInventory = () => {
   };
   return (
     <>
-      <Rectangle marginBottom="4rem" />
+      <Header marginBottom="4rem" />
       <SearchWrapper>
         <SearchInput placeholder="Seach Your List" />
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <img
-            onClick={() => navigate("/shopping-page")}
+            onClick={() => navigate("/add-inventory")}
             src={editSVG}
             alt="edit"
           />

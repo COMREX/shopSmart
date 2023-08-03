@@ -1,4 +1,4 @@
-import GridView from "../utils/gridVIew/gridView";
+import GridView from "../utils/grid-view/gridView";
 import groceryList from "../../DATA/GROCERY_LIST_DATA";
 import LiftedGridItem from "../utils/lifted-grid-item/liftedGridItem";
 

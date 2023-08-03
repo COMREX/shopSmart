@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, FormText, LoginWrapper } from "./logIn.styles";
-import AuthRectangle from "../utils/auth-rectangle/authRectangle";
+import AuthHeader from "../utils/auth-header/authHeader";
 import Input from "../utils/input/input";
 import Button from "../utils/button/button";
 
@@ -25,7 +25,7 @@ const Login = ({ handleClick }) => {
   return (
     <>
       <LoginWrapper>
-        <AuthRectangle
+        <AuthHeader
           heading={"Welcome to ShopSmart"}
           paragraph={"Fill Login form below correctly"}
         />

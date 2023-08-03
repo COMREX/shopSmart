@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const RectangleWrapper = styled.div`
+export const HeaderWrapper = styled.div`
   width: 100vw;
   height: 20rem;
   border-radius: 0rem 0rem 6rem 6rem;
@@ -18,7 +18,7 @@ export const RectangleWrapper = styled.div`
   }
 `;
 
-export const RectangleContent = styled.div`
+export const HeaderContent = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -28,8 +28,6 @@ export const RectangleContent = styled.div`
     height: 6rem;
   }
   @media (max-height: 440px) {
-    /* flex-direction: row;
-    align-items: center; */
     gap: 0.5rem;
     img {
       width: 4rem;

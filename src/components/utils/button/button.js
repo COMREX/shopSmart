@@ -8,8 +8,8 @@ const Button = ({
   fontSize,
   disabled,
   padding,
-  // height,
-  // width,
+  height,
+  width,
   fontWeight,
   borderRadius,
 }) => {
@@ -23,8 +23,8 @@ const Button = ({
       borderRadius={borderRadius}
       fontWeight={fontWeight}
       fontSize={fontSize}
-      // width={width}
-      // height={height}
+      width={width}
+      height={height}
     >
       {children}
     </ButtonWrapper>

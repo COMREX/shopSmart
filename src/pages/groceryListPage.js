@@ -1,5 +1,5 @@
-import SearchInput from "../components/utils/SearchInput/searchInput";
-import Rectangle from "../components/utils/rectangle/rectangle";
+import SearchInput from "../components/utils/search-input/searchInput";
+import Header from "../components/utils/header/header";
 import GroceryGridItems from "../components/grocery-grid-items/groceryGridItems";
 import { SearchWrapper } from "./styles/monthlyInventory.styles";
 import editSVG from "../Assets/svgs/edit.svg";
@@ -16,7 +16,7 @@ const GroceryListPage = () => {
   };
   return (
     <>
-      <Rectangle marginBottom="3.2rem" />
+      <Header marginBottom="3.2rem" />
       <SearchWrapper>
         <SearchInput placeholder="Search Your Grocery" />
         <img src={editSVG} alt="edit" />

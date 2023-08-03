@@ -2,25 +2,25 @@ import React from "react";
 import {
   HeadingText,
   ParaText,
-  RectangleContent,
-  RectangleWrapper,
+  HeaderContent,
+  HeaderWrapper,
   SvgImage,
-} from "./authRectangle.styles";
+} from "./authHeader.styles";
 import cartIcon from "../../../Assets/svgs/Group.svg";
 import logo from "../../../Assets/svgs/logo.svg";
-const AuthRectangle = ({ heading, paragraph }) => {
+const AuthHeader = ({ heading, paragraph }) => {
   return (
-    <RectangleWrapper>
-      <RectangleContent>
+    <HeaderWrapper>
+      <HeaderContent>
         <img src={logo} alt="" />
         <HeadingText>{heading}</HeadingText>
         <ParaText>{paragraph}</ParaText>
-      </RectangleContent>
+      </HeaderContent>
       <SvgImage>
         <img src={cartIcon} alt="cart" />
       </SvgImage>
-    </RectangleWrapper>
+    </HeaderWrapper>
   );
 };
 
-export default AuthRectangle;
+export default AuthHeader;
