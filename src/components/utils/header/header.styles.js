@@ -11,6 +11,17 @@ export const Wrapper = styled.div`
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   margin-bottom: ${({ marginBottom }) => marginBottom || 0};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    height: 5rem;
+  }
+`;
+
+export const HeaderSVG = styled.svg`
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    width: 78px;
+    height: 56px;
+  }
 `;
 
 export const FlexWrapper = styled.div`

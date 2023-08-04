@@ -12,7 +12,6 @@ export const GridContainer = styled.div`
   overflow: auto;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.xs} + 40px)) {
-    justify-content: center;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
