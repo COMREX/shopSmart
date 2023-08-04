@@ -14,9 +14,15 @@ import {
 } from "./styles/searchProduct.styles";
 import Button from "../components/utils/button/button";
 import theme from "../theme";
+import BarcodeScanner from "../components/barcode-scanner/barcode-scanner";
 
 const AddInventory = () => {
   const [fill, setFill] = useState([]);
+  const [result, setResult] = useState("No result");
+
+  const handleScan = (data) => {
+    setResult(data);
+  };
 
   const handleClick = (itemId) => {
     if (fill.includes(itemId)) {
@@ -31,7 +37,8 @@ const AddInventory = () => {
       <Header marginBottom="4.8rem" />
       <ShopSmartHeading marginBottom="1.3rem" />
       <QRcodeWrappr>
-        <QRcode marginBottom="1.3rem" />
+        {" "}
+        <BarcodeScanner onScan={handleScan} />
       </QRcodeWrappr>
       <SearchInputWrapprForCenter>
         <SearchInputWrappr>
