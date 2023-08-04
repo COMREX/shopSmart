@@ -21,19 +21,19 @@ export const SearchInputStyled = styled.input`
   font-size: ${({ theme }) => theme.typography.fontSize.regular};
   font-style: normal;
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
+  border-radius: calc(${({ theme }) => theme.spacing.xxs} + 0.1rem);
   line-height: normal;
   border: none;
   outline: none;
   @media (max-width: 620px) {
     width: 75%;
   }
-  @media (max-width: 470px) {
+  @media (max-width: 480px) {
     width: 70%;
   }
-
-  /* @media (max-width: 310px) {
-   background-color: red;
-  }  */
+  @media (max-width: 427px) {
+    width: 65%;
+  }
 `;
 
 export const SearchIconStyled = styled.img`
