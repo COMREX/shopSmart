@@ -12,6 +12,25 @@ export const SignupWrapper = styled.div`
   width: 50%;
   overflow: hidden;
 `;
+export const SignupInput = styled.input`
+  width: 70%;
+  height: ${(props) => props.theme.spacing.xl};
+  padding: ${(props) => props.theme.spacing.sm};
+  font-size: ${(props) => props.theme.typography.fontSize.sm};
+  color: ${(props) => props.theme.color.gray};
+  border-radius: ${({ theme }) => theme.spacing.xs};
+  border: none;
+  outline: none;
+  &:focus {
+    border: 1px solid ${(props) => props.theme.color.primary};
+  }
+  @media (max-height: 640px) {
+    height: calc(${(props) => props.theme.spacing.xl} - 1rem);
+  }
+  @media (max-height: 590px) {
+    width: 45%;
+  }
+`;
 export const Text = styled.h6`
   color: ${(props) => props.theme.color.black};
   font-family: ${(props) => props.theme.typography.fontFamily};

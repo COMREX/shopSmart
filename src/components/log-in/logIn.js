@@ -35,6 +35,8 @@ const Login = ({ handleClick }) => {
             name="username"
             InputBg={"rgba(255, 255, 255)"}
             required
+            width={"70%"}
+            height={"4.5rem"}
             value={formData.username}
             placeholder={"Username"}
             onChange={handleChange}
@@ -43,14 +45,16 @@ const Login = ({ handleClick }) => {
             type="email"
             InputBg={"rgba(255, 255, 255)"}
             required
+            width={"70%"}
+            height={"4.5rem"}
             value={formData.email}
             placeholder={"Email"}
             onChange={handleChange}
           />
           <Button
             bg={(props) => props.theme.color.primary}
-            width={"11rem"}
-            height={"5rem"}
+            width="9rem"
+            height="4.5rem"
             onClick={() => navigate("/home")}
             color={(props) => props.theme.color.white}
             active

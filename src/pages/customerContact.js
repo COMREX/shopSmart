@@ -50,6 +50,8 @@ const CustomerContact = () => {
           name="title"
           InputBg={(props) => props.theme.color.secondary}
           value={title}
+          width={"70%"}
+          height={"4.5rem"}
           onChange={handleChange}
           placeholder="Title ..."
         />
@@ -57,6 +59,8 @@ const CustomerContact = () => {
           type="text"
           name="email"
           value={email}
+          width={"70%"}
+          height={"4.5rem"}
           InputBg={(props) => props.theme.color.secondary}
           onChange={handleChange}
           placeholder="Email"
@@ -73,8 +77,8 @@ const CustomerContact = () => {
             activeColor
             color={(props) => props.theme.color.black}
             bg={(props) => props.theme.color.secondarys}
-            // width={"11rem"}
-            // height={"5rem"}
+            width="9rem"
+            height="4.5rem"
           >
             Cancel
           </Button>
@@ -89,8 +93,8 @@ const CustomerContact = () => {
             disabled={isSubmitButtonDisabled}
             type="submit"
             onClick={handleSubmit}
-            // width={"11rem"}
-            // height={"5rem"}
+            width={"9rem"}
+            height={"4.5rem"}
           >
             Send
           </Button>

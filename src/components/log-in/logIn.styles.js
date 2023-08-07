@@ -49,4 +49,7 @@ export const FormText = styled.p`
     color: ${(props) => props.theme.color.semiWhite};
     text-decoration: none;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.xxs}) {
+    font-size: calc(${(props) => props.theme.typography.fontSize.xxs} - 0.2rem);
+  }
 `;
