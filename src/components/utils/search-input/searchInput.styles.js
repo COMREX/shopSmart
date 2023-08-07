@@ -25,6 +25,7 @@ export const SearchInputStyled = styled.input`
   line-height: normal;
   border: none;
   outline: none;
+  padding-right: 1rem;
   @media (max-width: 620px) {
     width: 75%;
   }
