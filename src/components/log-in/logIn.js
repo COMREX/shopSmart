@@ -46,6 +46,7 @@ const Login = ({ handleClick }) => {
             InputBg={"rgba(255, 255, 255)"}
             required
             width={"70%"}
+            height={"4.5rem"}
             value={formData.email}
             placeholder={"Email"}
             onChange={handleChange}
