@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BarcodeWrapper, Heading } from "./barcodeScanner.styles";
 import { BrowserMultiFormatReader, NotFoundException } from "@zxing/library";
+import SearchProductData from "../../DATA/SEARCH_PRODUCT_DATA";
+import QRCode from "../../Assets/images/QRcode.svg";
 
 const BarcodeScanner = ({ onScan }) => {
   const [scanResult, setScanResult] = useState("No result");
   const videoRef = useRef(null);
   const codeReader = useRef(new BrowserMultiFormatReader());
+
+  const trimedResult = scanResult.substring(0, 10);
 
   useEffect(() => {
     const startScanning = async () => {
@@ -52,11 +57,26 @@ const BarcodeScanner = ({ onScan }) => {
     return () => {
       stopScanning();
     };
-  }, [onScan]);
+  }, [onScan, SearchProductData]);
+
+  const newlyAddedItem = {
+    id: SearchProductData.length + 2,
+    ItemImg: QRCode,
+    ItemHeading: trimedResult,
+    ItemParagraph: "Scanned Item",
+    date: "15/07/2023",
+  };
+
+  if (scanResult !== "") {
+    SearchProductData.unshift(newlyAddedItem);
+    setScanResult("");
+    console.log(newlyAddedItem, ...SearchProductData);
+    console.log(SearchProductData);
+  }
 
   return (
-    <div>
-      <h2>Scan Barcode and QR Code</h2>
+    <BarcodeWrapper>
+      <Heading>Scan Barcode and QR Code</Heading>
       {/* Add the video element with the ID 'video' */}
       <video
         ref={videoRef}
@@ -64,7 +84,7 @@ const BarcodeScanner = ({ onScan }) => {
         style={{ width: "100%", height: "auto" }}
       />
       <p>Scan Result: {scanResult}</p>
-    </div>
+    </BarcodeWrapper>
   );
 };
 

@@ -14,22 +14,25 @@ import {
 } from "./styles/searchProduct.styles";
 import Button from "../components/utils/button/button";
 import theme from "../theme";
-import BarcodeScanner from "../components/barcode-scanner/barcode-scanner";
+import BarcodeScanner from "../components/barcode-scanner/barcodeScanner";
+import menuIcon from "../Assets/svgs/dots-item.svg";
 
 const AddInventory = () => {
-  const [fill, setFill] = useState([]);
   const [result, setResult] = useState("No result");
 
   const handleScan = (data) => {
     setResult(data);
   };
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  const handleClick = (itemId) => {
-    if (fill.includes(itemId)) {
-      setFill(fill.filter((id) => id !== itemId));
-    } else {
-      setFill([...fill, itemId]);
-    }
+  const handleClick = (id) => {
+    setSelectedItem((prevSelectedItem) =>
+      prevSelectedItem === id ? null : id
+    );
+  };
+
+  const handleBlur = () => {
+    setSelectedItem(null);
   };
 
   return (
@@ -37,7 +40,6 @@ const AddInventory = () => {
       <Header marginBottom="4.8rem" />
       <ShopSmartHeading marginBottom="1.3rem" />
       <QRcodeWrappr>
-        {" "}
         <BarcodeScanner onScan={handleScan} />
       </QRcodeWrappr>
       <SearchInputWrapprForCenter>
@@ -60,16 +62,15 @@ const AddInventory = () => {
         {SearchProductData.map((data) => (
           <ListItem
             key={data.id}
-            handleClick={() => handleClick(data.id)}
             heading={data.ItemHeading}
             paragraph={data.ItemParagraph}
             cover={data.ItemImg}
-            svgIcon={
-              fill.includes(data.id)
-                ? data.ItemWishlishFill
-                : data.ItemWhishlist
-            }
+            svgIcon={menuIcon}
             date={data.date}
+            handleClick={() => handleClick(data.id)}
+            handleBlur={handleBlur}
+            showDropdown={selectedItem === data.id}
+            id={data.id}
           />
         ))}
       </ListView>
