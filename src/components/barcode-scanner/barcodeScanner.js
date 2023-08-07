@@ -6,6 +6,7 @@ import QRCode from "../../Assets/images/QRcode.svg";
 const BarcodeScanner = ({ onScan }) => {
   const videoRef = useRef(null);
   const codeReader = useRef(new BrowserMultiFormatReader());
+  const [videoPlaying, setVideoPlaying] = useState(true);
 
   useEffect(() => {
     const startScanning = async () => {
@@ -54,13 +55,28 @@ const BarcodeScanner = ({ onScan }) => {
     };
   }, [onScan]);
 
+  const handleVideoClick = () => {
+    if (videoPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+    setVideoPlaying((prev) => !prev);
+  };
+
   return (
     <BarcodeWrapper>
       <Heading>Scan Barcode and QR Code</Heading>
       <video
         ref={videoRef}
-        id="video"
-        style={{ width: "100%", height: "auto" }}
+        id="barcode-scanner-video"
+        style={{
+          width: "250px",
+          height: "189px",
+          border: "2px solid #06919A",
+          marginBottom: "20px",
+        }}
+        onClick={handleVideoClick} // Add click event to pause/play the video
       />
     </BarcodeWrapper>
   );

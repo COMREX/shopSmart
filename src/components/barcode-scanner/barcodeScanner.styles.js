@@ -5,6 +5,8 @@ export const BarcodeWrapper = styled.div`
   flex-direction: column;
   row-gap: 1rem;
   align-items: center;
+  width: '150px',
+  height: '150px'
 `;
 
 export const Heading = styled.h2`
