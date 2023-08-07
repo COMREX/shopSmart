@@ -8,7 +8,7 @@ export const ButtonWrapper = styled.button`
   color: ${(props) => props.color};
   cursor: pointer;
   outline: none;
-  font-size: ${(props) => props.theme.typography.fontSize.md};
+  font-size: ${(props) => props.fontSize || props.theme.typography.fontSize.md};
   font-family: ${(props) => props.theme.typography.fontFamily};
   font-weight: ${(props) => props.theme.typography.fontWeight.Regular};
   height: ${(props) => props.height};
