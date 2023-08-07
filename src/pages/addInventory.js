@@ -1,12 +1,12 @@
+import React, { useState } from "react";
 import Header from "../components/utils/header/header";
 import ShopSmartHeading from "../components/utils/shop-smart-heading/shopSmartHeading";
-import QRcode from "../components/utils/qr-code/qrCode";
+import BarcodeScanner from "../components/barcode-scanner/barcodeScanner";
 import SearchInput from "../components/utils/search-input/searchInput";
 import ListItem from "../components/utils/list-Item/listItem";
 import SearchProductData from "../DATA/SEARCH_PRODUCT_DATA";
 import ListView from "../components/utils/list-view/listView";
 import Navigation from "../components/utils/navigation/navigation";
-import { useState } from "react";
 import {
   QRcodeWrappr,
   SearchInputWrappr,
@@ -14,16 +14,24 @@ import {
 } from "./styles/searchProduct.styles";
 import Button from "../components/utils/button/button";
 import theme from "../theme";
-import BarcodeScanner from "../components/barcode-scanner/barcodeScanner";
+import QRCode from "../Assets/images/QRcode.svg";
 import menuIcon from "../Assets/svgs/dots-item.svg";
 
 const AddInventory = () => {
-  const [result, setResult] = useState("No result");
+  const [scanResults, setScanResults] = useState(SearchProductData);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleScan = (data) => {
-    setResult(data);
+    const newItem = {
+      id: scanResults.length + 1,
+      ItemImg: QRCode,
+      ItemHeading: data.substring(0, 10),
+      ItemParagraph: "Scanned Item",
+      date: new Date().toLocaleDateString(),
+    };
+
+    setScanResults((prevItems) => [newItem, ...prevItems]);
   };
-  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleClick = (id) => {
     setSelectedItem((prevSelectedItem) =>
@@ -59,7 +67,7 @@ const AddInventory = () => {
         </SearchInputWrappr>
       </SearchInputWrapprForCenter>
       <ListView height="48vh">
-        {SearchProductData.map((data) => (
+        {scanResults.map((data) => (
           <ListItem
             key={data.id}
             heading={data.ItemHeading}
