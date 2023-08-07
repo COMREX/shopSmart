@@ -7,6 +7,8 @@ const theme = {
     semiWhite: "rgba(255, 255, 255, 0.9);",
     black: "rgba(0, 0, 0, 0.69)",
     gray: "rgba(0, 0, 0, 0.46)",
+    bodyMobile: "#FFFFFF",
+    bodyDesktop: "",
   },
   typography: {
     fontFamily: "Inter, Sans-serif",

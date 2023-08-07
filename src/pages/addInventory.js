@@ -61,19 +61,6 @@ const AddInventory = () => {
     <>
       <Header marginBottom="4.8rem" />
       <ShopSmartHeading marginBottom="1.3rem" />
-      <Button
-        height="3.7rem"
-        width="10rem"
-        marginBottom="1.5rem"
-        fontWeight={theme.typography.fontWeight.medium}
-        color={theme.color.white}
-        fontSize={theme.typography.fontSize.xs}
-        borderRadius={theme.spacing.xxs}
-        bg={theme.color.primary}
-        onClick={handleClearAllList}
-      >
-        Clear All List
-      </Button>
       <QRcodeWrappr>
         <BarcodeScanner onScan={handleScan} />
       </QRcodeWrappr>
@@ -90,6 +77,19 @@ const AddInventory = () => {
             bg={theme.color.primary}
           >
             Add
+          </Button>
+          <Button
+            height="3.7rem"
+            width="10rem"
+            marginBottom="1.5rem"
+            fontWeight={theme.typography.fontWeight.medium}
+            color={theme.color.white}
+            fontSize={theme.typography.fontSize.xs}
+            borderRadius={theme.spacing.xxs}
+            bg={theme.color.primary}
+            onClick={handleClearAllList}
+          >
+            Remove all
           </Button>
         </SearchInputWrappr>
       </SearchInputWrapprForCenter>

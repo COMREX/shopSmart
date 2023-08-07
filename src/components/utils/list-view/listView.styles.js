@@ -7,4 +7,5 @@ export const ListViewWrapper = styled.div`
   gap: calc(${({ theme }) => theme.spacing.sm} + 0.4rem);
   height: ${({ height }) => height || "auto"};
   overflow: auto;
+  padding-bottom: 6.6rem;
 `;

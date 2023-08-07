@@ -11,6 +11,10 @@ export const ListItemWrapper = styled.div`
   border-radius: 0.8rem;
   background-color: ${({ theme }) => theme.color.secondary};
   position: relative;
+
+  /* img {
+    position: relative;
+  } */
 `;
 
 export const GapCotainer = styled.div`
