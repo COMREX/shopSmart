@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const ButtonWrapper = styled.button`
   background-color: ${(props) => props.bg};
-  border: none;
+  border: ${(props) => props.border || "none"};
   outline: none;
   white-space: nowrap;
   color: ${(props) => props.color};

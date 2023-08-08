@@ -12,6 +12,7 @@ const Button = ({
   width,
   fontWeight,
   borderRadius,
+  border,
 }) => {
   return (
     <ButtonWrapper
@@ -25,6 +26,7 @@ const Button = ({
       fontSize={fontSize}
       width={width}
       height={height}
+      border={border}
     >
       {children}
     </ButtonWrapper>

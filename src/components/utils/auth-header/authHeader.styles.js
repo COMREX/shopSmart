@@ -1,10 +1,10 @@
 import { styled } from "styled-components";
 
 export const HeaderWrapper = styled.div`
-  width: 100vw;
-  height: 20rem;
+  width: 100%;
+  height: ${(props) => props.height || "20rem"};
   border-radius: 0rem 0rem 6rem 6rem;
-  background: rgba(6, 145, 154, 0.38);
+  background: ${(props) => props.headerBg};
   display: flex;
   justify-content: space-between;
   padding-left: ${(props) => props.theme.spacing.lg};
@@ -20,7 +20,7 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderContent = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   flex-direction: column;
   gap: 1rem;
   img {
@@ -34,6 +34,21 @@ export const HeaderContent = styled.div`
       height: 4rem;
     }
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.xxxl}) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  @media (max-width: 2560px) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
 `;
 export const HeadingText = styled.div`
   color: ${(props) => props.theme.color.white};
@@ -44,6 +59,9 @@ export const HeadingText = styled.div`
   line-height: normal;
   @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     font-size: 1.8rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.xxl}) {
+    font-size: 2rem;
   }
 `;
 export const ParaText = styled.p`
