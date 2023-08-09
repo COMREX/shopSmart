@@ -93,8 +93,8 @@ const CustomerContact = () => {
             disabled={isSubmitButtonDisabled}
             type="submit"
             onClick={handleSubmit}
-            width={"9rem"}
-            height={"4.5rem"}
+            width="11rem"
+            height="4.5rem"
           >
             Send
           </Button>
