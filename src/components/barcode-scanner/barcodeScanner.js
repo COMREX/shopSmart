@@ -17,7 +17,17 @@ const BarcodeScanner = ({ onScan }) => {
     // Log devices for debugging
     console.log(videoDevices);
 
-    return videoDevices[0]?.deviceId; // Assumes the first camera is the main one.
+    // Attempt to find the back camera by checking for device label containing "back"
+    const backCamera = videoDevices.find((device) =>
+      device.label.toLowerCase().includes("back")
+    );
+
+    if (backCamera) {
+      return backCamera.deviceId;
+    } else {
+      // Fallback to the first camera if a back camera is not found
+      return videoDevices[0]?.deviceId;
+    }
   };
 
   const startScanning = async () => {
