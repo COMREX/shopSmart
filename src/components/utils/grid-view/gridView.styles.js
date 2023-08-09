@@ -17,4 +17,12 @@ export const GridContainer = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     column-gap: 5rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding-bottom: 6.6rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    height: 80vh;
+  }
 `;

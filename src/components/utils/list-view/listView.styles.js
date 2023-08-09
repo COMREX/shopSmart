@@ -8,4 +8,5 @@ export const ListViewWrapper = styled.div`
   height: ${({ height }) => height || "auto"};
   overflow: auto;
   padding-bottom: 6.6rem;
+  padding-top: 2rem;
 `;

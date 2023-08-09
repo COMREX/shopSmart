@@ -12,6 +12,7 @@ import GroceryListPage from "./pages/groceryListPage";
 import DiscountPage from "./pages/discountPage";
 import AddInventory from "./pages/addInventory";
 import ShoppingPage from "./pages/shoppingPage";
+import TestBar from "./components/text-sidebar/testNavbar";
 
 function App() {
   return (
@@ -19,13 +20,24 @@ function App() {
       <GlobalStyles />
       <Routes>
         <Route path="/" Component={LoginSignupPage} />
-        <Route path="/home" Component={HomePage} />
-        <Route path="/monthly-inventory" Component={MonthlyInventory} />
-        <Route path="/discount" Component={DiscountPage} />
-        <Route path="/grocery-list" Component={GroceryListPage} />
-        <Route path="/add-inventory" Component={AddInventory} />
-        {/* <Route path="/shopping-page" Component={ShoppingPage} /> */}
-        <Route path="customer-services" Component={CustomerContact} />
+
+        <Route
+          path="/*"
+          element={
+            <>
+              {/* <TestBar /> */}
+              <Routes>
+                <Route path="/home" Component={HomePage} />
+                <Route path="/monthly-inventory" Component={MonthlyInventory} />
+                <Route path="/discount" Component={DiscountPage} />
+                <Route path="/grocery-list" Component={GroceryListPage} />
+                <Route path="/add-inventory" Component={AddInventory} />
+                {/* <Route path="/shopping-page" Component={ShoppingPage} /> */}
+                <Route path="customer-services" Component={CustomerContact} />
+              </Routes>
+            </>
+          }
+        />
       </Routes>
     </ThemeProvider>
   );

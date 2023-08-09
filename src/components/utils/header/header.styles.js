@@ -3,8 +3,8 @@ import { styled } from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding-left: calc(${({ theme }) => theme.spacing.md} + 0.4rem);
-  padding-right: calc(${({ theme }) => theme.spacing.sm} + 0.4rem);
+  justify-content: center;
+
   height: 7.5rem;
   width: 100vw;
   background-color: ${({ theme }) => theme.color.primary};
@@ -28,5 +28,5 @@ export const FlexWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: inherit;
+  width: 80%;
 `;

@@ -1,12 +1,16 @@
 import {
   CoverImageWrapper,
   DescriptionWrapper,
+  DesktopIcons,
   GapCotainer,
   ListItemWrapper,
+  MobileIcon,
   Para,
 } from "./listItem.styles";
 import StarsGenerator from "../stars-generator/starsGenerator";
 import ListDropdown from "../list-dropdown/listDropdown";
+import DeleteIcon from "../../../Assets/svgs/delete-icon.svg";
+import EditIcon from "../../../Assets/svgs/edit.svg";
 
 const ListItem = ({
   id,
@@ -32,7 +36,12 @@ const ListItem = ({
         </DescriptionWrapper>
       </GapCotainer>
 
-      <img
+      <DesktopIcons>
+        <img src={EditIcon} alt="edit" />
+        <img src={DeleteIcon} alt="delete" />
+      </DesktopIcons>
+
+      <MobileIcon
         tabIndex={0}
         onClick={() => handleClick(id)}
         src={svgIcon}

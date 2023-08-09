@@ -8,7 +8,7 @@ const theme = {
     black: "rgba(0, 0, 0, 0.69)",
     gray: "rgba(0, 0, 0, 0.46)",
     bodyMobile: "#FFFFFF",
-    bodyDesktop: "",
+    bodyDesktop: "#FAFEFE",
   },
   typography: {
     fontFamily: "Inter, Sans-serif",

@@ -16,4 +16,9 @@ export const NavWrapper = styled.section`
     padding: calc(${({ theme }) => theme.spacing.xs} + 0.4rem)
       calc(${({ theme }) => theme.spacing.xl} - 1rem);
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    position: static;
+    display: none;
+  }
 `;

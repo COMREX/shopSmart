@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <Header marginBottom="3rem" />
       <ShopSmartHeading marginBottom="1rem" />
-      <HomeItems paddingBottom="6.6rem" />
+      <HomeItems />
       <Navigation />
     </>
   );
