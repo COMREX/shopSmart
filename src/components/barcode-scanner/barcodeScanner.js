@@ -8,30 +8,51 @@ const BarcodeScanner = ({ onScan }) => {
   const codeReader = useRef(new BrowserMultiFormatReader());
   const [videoPlaying, setVideoPlaying] = useState(true);
 
+  const getMainCameraId = async () => {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const videoDevices = devices.filter(
+      (device) => device.kind === "videoinput"
+    );
+
+    // Log devices for debugging
+    console.log(videoDevices);
+
+    return videoDevices[0]?.deviceId; // Assumes the first camera is the main one.
+  };
+
   const startScanning = async () => {
     if (videoRef.current) {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: {
-            facingMode: "environment", // This ensures rear camera on mobiles.
-            focusMode: "continuous", // Enables continuous auto-focus.
-          },
-        });
+        const mainCameraId = await getMainCameraId();
 
-        videoRef.current.srcObject = stream; // Attach stream to video element.
+        const stream = await navigator.mediaDevices
+          .getUserMedia({
+            video: {
+              deviceId: mainCameraId,
+              focusMode: "continuous",
+            },
+          })
+          .catch((error) => {
+            console.error("Error accessing the camera:", error);
+          });
 
-        await codeReader.current.decodeFromStream(
-          stream,
-          videoRef.current,
-          (result, error) => {
-            if (result) {
-              onScan(result.text);
+        if (stream) {
+          videoRef.current.srcObject = stream;
+
+          await codeReader.current.decodeFromStream(
+            stream,
+            videoRef.current,
+            (result, error) => {
+              if (result) {
+                console.log("Scanning result:", result.text); // Log the scan result
+                onScan(result.text);
+              }
+              if (error && !(error instanceof NotFoundException)) {
+                console.error("Error decoding barcode:", error);
+              }
             }
-            if (error && !(error instanceof NotFoundException)) {
-              console.error("Error decoding barcode:", error);
-            }
-          }
-        );
+          );
+        }
       } catch (error) {
         console.error("Error starting scanning:", error);
       }
@@ -64,6 +85,9 @@ const BarcodeScanner = ({ onScan }) => {
       <Heading>Scan Barcode and QR Code</Heading>
       <video
         ref={videoRef}
+        autoplay
+        playsInline
+        muted
         id="barcode-scanner-video"
         style={{
           width: "250px",
@@ -71,7 +95,7 @@ const BarcodeScanner = ({ onScan }) => {
           border: "2px solid #06919A",
           marginBottom: "20px",
         }}
-        onClick={handleVideoClick} // Add click event to pause/play the video
+        onClick={handleVideoClick}
       />
     </BarcodeWrapper>
   );
