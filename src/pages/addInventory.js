@@ -38,6 +38,12 @@ const AddInventory = () => {
     setScanResults((prevItems) => [newItem, ...prevItems]);
   };
 
+  const handleClick = (id) => {
+    setSelectedItem((prevSelectedItem) =>
+      prevSelectedItem === id ? null : id
+    );
+  };
+
   const handleDelete = (id, event) => {
     console.log("i clicked");
     const videoRef = document.getElementById("barcode-scanner-video");
