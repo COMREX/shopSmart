@@ -8,46 +8,41 @@ const BarcodeScanner = ({ onScan }) => {
   const codeReader = useRef(new BrowserMultiFormatReader());
   const [videoPlaying, setVideoPlaying] = useState(true);
 
-  useEffect(() => {
-    const startScanning = async () => {
-      if (videoRef.current) {
-        try {
-          const hints = new Map();
-          const formats = [
-            "code_128",
-            "code_39",
-            "code_93",
-            "codabar",
-            "ean_8",
-            "ean_13",
-            "upc_a",
-            "upc_e",
-            "upc_ean",
-            "qr_code",
-          ];
-          hints.set(4, formats);
-          await codeReader.current.decodeFromVideoDevice(
-            undefined,
-            videoRef.current,
-            (result, error) => {
-              if (result) {
-                onScan(result.text);
-              }
-              if (error && !(error instanceof NotFoundException)) {
-                console.error("Error decoding barcode:", error);
-              }
+  const startScanning = async () => {
+    if (videoRef.current) {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: {
+            facingMode: "environment", // This ensures rear camera on mobiles.
+            focusMode: "continuous", // Enables continuous auto-focus.
+          },
+        });
+
+        videoRef.current.srcObject = stream; // Attach stream to video element.
+
+        await codeReader.current.decodeFromStream(
+          stream,
+          videoRef.current,
+          (result, error) => {
+            if (result) {
+              onScan(result.text);
             }
-          );
-        } catch (error) {
-          console.error("Error starting scanning:", error);
-        }
+            if (error && !(error instanceof NotFoundException)) {
+              console.error("Error decoding barcode:", error);
+            }
+          }
+        );
+      } catch (error) {
+        console.error("Error starting scanning:", error);
       }
-    };
+    }
+  };
 
-    const stopScanning = () => {
-      codeReader.current.reset();
-    };
+  const stopScanning = () => {
+    codeReader.current.reset();
+  };
 
+  useEffect(() => {
     startScanning();
 
     return () => {
