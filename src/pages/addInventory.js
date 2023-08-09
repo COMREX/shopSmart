@@ -15,51 +15,57 @@ import Button from "../components/utils/button/button";
 import theme from "../theme";
 import BarcodeScanner from "../components/barcode-scanner/barcodeScanner";
 import menuIcon from "../Assets/svgs/dots-item.svg";
+import Scanner from "../components/barcode-scanner/barcodeScanner";
 
 const AddInventory = () => {
-  const [scanResults, setScanResults] = useState(() => {
-    let itemsInLocalStorage = localStorage.getItem("scannedItems");
-    return itemsInLocalStorage ? JSON.parse(itemsInLocalStorage) : [];
-  });
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [code, setCode] = useState("");
+  // const [scanResults, setScanResults] = useState(() => {
+  //   let itemsInLocalStorage = localStorage.getItem("scannedItems");
+  //   return itemsInLocalStorage ? JSON.parse(itemsInLocalStorage) : [];
+  // });
+  // const [selectedItem, setSelectedItem] = useState(null);
 
-  useEffect(() => {
-    localStorage.setItem("scannedItems", JSON.stringify(scanResults));
-  }, [scanResults]);
+  // useEffect(() => {
+  //   localStorage.setItem("scannedItems", JSON.stringify(scanResults));
+  // }, [scanResults]);
 
-  const handleScan = (data) => {
-    const newItem = {
-      id: scanResults.length + 1,
-      ItemHeading: data.substring(0, 10),
-      ItemParagraph: "Scanned Item",
-      date: new Date().toLocaleDateString(),
-    };
+  // const handleScan = (data) => {
+  //   const newItem = {
+  //     id: scanResults.length + 1,
+  //     ItemHeading: data.substring(0, 10),
+  //     ItemParagraph: "Scanned Item",
+  //     date: new Date().toLocaleDateString(),
+  //   };
 
-    setScanResults((prevItems) => [newItem, ...prevItems]);
-  };
+  //   setScanResults((prevItems) => [newItem, ...prevItems]);
+  // };
 
-  const handleDelete = (id, event) => {
-    console.log("i clicked");
-    const videoRef = document.getElementById("barcode-scanner-video");
-    if (videoRef) {
-      videoRef.pause();
-    }
+  // const handleDelete = (id, event) => {
+  //   console.log("i clicked");
+  //   const videoRef = document.getElementById("barcode-scanner-video");
+  //   if (videoRef) {
+  //     videoRef.pause();
+  //   }
 
-    setScanResults((prevItems) => prevItems.filter((data) => data.id !== id));
-  };
+  //   setScanResults((prevItems) => prevItems.filter((data) => data.id !== id));
+  // };
 
-  const handleBlur = () => {
-    setSelectedItem(null);
-  };
+  // const handleBlur = () => {
+  //   setSelectedItem(null);
+  // };
 
-  const handleClearAllList = () => {
-    setScanResults([]);
-    localStorage.removeItem("scannedItems");
-  };
+  // const handleClearAllList = () => {
+  //   setScanResults([]);
+  //   localStorage.removeItem("scannedItems");
+  // };
 
   return (
     <>
-      <Header marginBottom="4.8rem" />
+      <div className="App">
+        <Scanner onScan={(decodedText) => setCode(decodedText)} />
+        {code && <div>Scanned Code: {code}</div>}
+      </div>
+      {/* <Header marginBottom="4.8rem" />
       <ShopSmartHeading marginBottom="1.3rem" />
       <Button
         height="3.7rem"
@@ -75,7 +81,7 @@ const AddInventory = () => {
         Clear All List
       </Button>
       <QRcodeWrappr>
-        <BarcodeScanner onScan={handleScan} />
+        <BarcodeScanner onResult={handleScan} />
       </QRcodeWrappr>
       <SearchInputWrapprForCenter>
         <SearchInputWrappr>
@@ -109,7 +115,7 @@ const AddInventory = () => {
           />
         ))}
       </ListView>
-      <Navigation />
+      <Navigation /> */}
     </>
   );
 };

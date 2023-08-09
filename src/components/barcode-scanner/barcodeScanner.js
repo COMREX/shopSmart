@@ -1,114 +1,48 @@
-import React, { useState, useEffect, useRef } from "react";
-import { BarcodeWrapper, Heading } from "./barcodeScanner.styles";
+import React, { useRef, useState } from "react";
+import Webcam from "react-webcam";
 import { BrowserMultiFormatReader, NotFoundException } from "@zxing/library";
-import QRCode from "../../Assets/images/QRcode.svg";
 
-const BarcodeScanner = ({ onScan }) => {
-  const videoRef = useRef(null);
-  const codeReader = useRef(new BrowserMultiFormatReader());
-  const [videoPlaying, setVideoPlaying] = useState(true);
+const videoConstraints = {
+  facingMode: "environment", // Use the rear camera (for mobile devices)
+};
 
-  const getMainCameraId = async () => {
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    const videoDevices = devices.filter(
-      (device) => device.kind === "videoinput"
-    );
+const Scanner = ({ onScan }) => {
+  const webcamRef = useRef(null);
+  const [scanning, setScanning] = useState(false);
 
-    // Log devices for debugging
-    console.log(videoDevices);
+  const capture = async () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    if (!imageSrc) return;
 
-    // Attempt to find the back camera by checking for device label containing "back"
-    const backCamera = videoDevices.find((device) =>
-      device.label.toLowerCase().includes("back")
-    );
-
-    if (backCamera) {
-      return backCamera.deviceId;
-    } else {
-      // Fallback to the first camera if a back camera is not found
-      return videoDevices[0]?.deviceId;
-    }
-  };
-
-  const startScanning = async () => {
-    if (videoRef.current) {
-      try {
-        const mainCameraId = await getMainCameraId();
-
-        const stream = await navigator.mediaDevices
-          .getUserMedia({
-            video: {
-              deviceId: mainCameraId,
-              focusMode: "continuous",
-            },
-          })
-          .catch((error) => {
-            console.error("Error accessing the camera:", error);
-          });
-
-        if (stream) {
-          videoRef.current.srcObject = stream;
-
-          await codeReader.current.decodeFromStream(
-            stream,
-            videoRef.current,
-            (result, error) => {
-              if (result) {
-                console.log("Scanning result:", result.text); // Log the scan result
-                onScan(result.text);
-              }
-              if (error && !(error instanceof NotFoundException)) {
-                console.error("Error decoding barcode:", error);
-              }
-            }
-          );
-        }
-      } catch (error) {
-        console.error("Error starting scanning:", error);
+    const codeReader = new BrowserMultiFormatReader();
+    try {
+      const result = await codeReader.decodeFromImageUrl(imageSrc);
+      if (result) {
+        onScan(result.text);
+        setScanning(false);
       }
+    } catch (error) {
+      if (!(error instanceof NotFoundException)) {
+        console.error(error);
+      }
+      // For NotFoundException, you might not need to do anything since it just means no barcode/QR was detected.
     }
-  };
-
-  const stopScanning = () => {
-    codeReader.current.reset();
-  };
-
-  useEffect(() => {
-    startScanning();
-
-    return () => {
-      stopScanning();
-    };
-  }, [onScan]);
-
-  const handleVideoClick = () => {
-    if (videoPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setVideoPlaying((prev) => !prev);
   };
 
   return (
-    <BarcodeWrapper>
-      <Heading>Scan Barcode and QR Code</Heading>
-      <video
-        ref={videoRef}
-        autoplay
-        playsInline
-        muted
-        id="barcode-scanner-video"
-        style={{
-          width: "250px",
-          height: "189px",
-          border: "2px solid #06919A",
-          marginBottom: "20px",
-        }}
-        onClick={handleVideoClick}
+    <div>
+      <Webcam
+        audio={false}
+        height={300}
+        ref={webcamRef}
+        screenshotFormat="image/jpeg"
+        width={300}
+        videoConstraints={videoConstraints}
+        onUserMedia={() => setScanning(true)}
       />
-    </BarcodeWrapper>
+      {scanning && setInterval(capture, 1000)}
+    </div>
   );
 };
 
-export default BarcodeScanner;
+export default Scanner;
