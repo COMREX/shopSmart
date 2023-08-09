@@ -12,8 +12,9 @@ import GroceryListPage from "./pages/groceryListPage";
 import DiscountPage from "./pages/discountPage";
 import AddInventory from "./pages/addInventory";
 import ShoppingPage from "./pages/shoppingPage";
+import desktopHeader from "./components/utils/desktop-header/desktopHeader";
 
-function App() {
+function App( ) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
