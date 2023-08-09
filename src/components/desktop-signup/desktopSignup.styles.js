@@ -8,7 +8,6 @@ export const DesktopSignupWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.4rem solid rgba(6, 145, 154, 0.8);
 `;
 export const SignupRightSide = styled.div`
   width: 50%;
@@ -40,10 +39,16 @@ export const ParaText = styled.p`
   font-weight: 500;
   span {
     color: ${(props) => props.theme.color.primary};
+    cursor: pointer;
   }
 `;
 export const CrossIcon = styled.img`
   float: right;
   padding: 1rem;
   cursor: pointer;
+`;
+export const WrapperRightSide = styled.div`
+  width: 50%;
+  height: 100%;
+  background-image: url(${sideImage});
 `;

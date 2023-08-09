@@ -12,16 +12,13 @@ import GroceryListPage from "./pages/groceryListPage";
 import DiscountPage from "./pages/discountPage";
 import AddInventory from "./pages/addInventory";
 import ShoppingPage from "./pages/shoppingPage";
-import DesktopLogin from "./components/desktop-login/desktopLogin";
-import DesktopAuthBg from "./components/desktop-auth-bg/desktopAuthBg";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {/* <DesktopLogin /> */}
-      <DesktopAuthBg />
-      {/* <Routes>
+
+      <Routes>
         <Route path="/" Component={LoginSignupPage} />
         <Route path="/home" Component={HomePage} />
         <Route path="/monthly-inventory" Component={MonthlyInventory} />
@@ -29,7 +26,7 @@ function App() {
         <Route path="/grocery-list" Component={GroceryListPage} />
         <Route path="/add-inventory" Component={AddInventory} />
         <Route path="customer-services" Component={CustomerContact} />
-      </Routes> */}
+      </Routes>
     </ThemeProvider>
   );
 }

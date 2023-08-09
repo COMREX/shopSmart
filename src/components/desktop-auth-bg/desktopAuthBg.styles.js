@@ -4,7 +4,9 @@ export const LandingWrapper = styled.div`
   width: 100%;
   height: 100vh;
   background-image: url(${background});
-  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 `;
 export const LandingWrapperOpacity = styled.div`
   width: 100%;

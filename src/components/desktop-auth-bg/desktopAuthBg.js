@@ -9,7 +9,6 @@ import {
   StepperDotsMain,
 } from "./desktopAuthBg.styles";
 import Button from "../utils/button/button";
-import stepperDots from "../../Assets/svgs/stepper-dots.svg";
 import DesktopLoginSignup from "../desktop-login-signup/desktopLoginSignup";
 
 const DesktopAuthBg = () => {
@@ -23,7 +22,7 @@ const DesktopAuthBg = () => {
         <AuthContentWrapper>
           {toggle ? (
             <div style={{ width: "100%", height: "100%" }}>
-              <DesktopLoginSignup />
+              <DesktopLoginSignup handleCross={handleCross} />
             </div>
           ) : (
             <>
