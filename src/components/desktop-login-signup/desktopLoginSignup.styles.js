@@ -6,7 +6,7 @@ export const DesktopLoginSignupWrapper = styled.div`
   background-color: #fafefe;
   display: flex;
   justify-content: center;
-  border: 0.4rem solid rgba(6, 145, 154, 0.8);
+  border: 0.2rem solid rgba(6, 145, 154, 0.8);
   overflow: hidden;
   position: relative;
 `;
