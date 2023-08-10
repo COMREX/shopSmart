@@ -6,14 +6,22 @@ import DesktopHeader from "../components/utils/desktop-header/desktopHeader";
 import { NavLI } from "../components/utils/desktop-header/desktopHeader.styles";
 
 const HomePage = () => {
+  const buttonitemss = [
+       {key:1,  text: "Login"},
+       {key:1,  text: "Login"},
+
+      
+  ]
+
+
+   
+  
+  // const array = Array.from(buttonitems)
   return (
     <>
-      <Header marginBottom="3rem" />
-      {/* <DesktopHeader signin="SIGNIN" signout="SIGNOUT">
-        <NavLI>HOME</NavLI>
-        <NavLI>ABOUT</NavLI> 
-        <NavLI>CONTACT</NavLI> 
-      </DesktopHeader> */}
+      {/* <Header marginBottom="3rem" /> */}
+      <DesktopHeader />
+         
       <ShopSmartHeading marginBottom="1rem" />
       <HomeItems paddingBottom="6.6rem" />
       <Navigation />
