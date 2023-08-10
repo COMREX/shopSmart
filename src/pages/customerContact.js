@@ -77,7 +77,7 @@ const CustomerContact = () => {
             activeColor
             color={(props) => props.theme.color.black}
             bg={(props) => props.theme.color.secondarys}
-            width="9rem"
+            width="11rem"
             height="4.5rem"
           >
             Cancel

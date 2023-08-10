@@ -3,7 +3,6 @@ import "./App.css";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
 import GlobalStyles from "./gloabalStyles";
-
 import LoginSignupPage from "./pages/loginSignupPage";
 import CustomerContact from "./pages/customerContact";
 import HomePage from "./pages/homePage";
