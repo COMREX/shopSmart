@@ -13,6 +13,7 @@ import AddInventory from "./pages/addInventory";
 import ShoppingPage from "./pages/shoppingPage";
 import TestBar from "./components/text-sidebar/testNavbar";
 import Header from "./components/utils/header/header";
+import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
         <Route
           path="/*"
           element={
-            <>
-              <Header />
-              {/* <TestBar /> */}
+            <div style={{ display: "flex", alignItems: "stretch" }}>
+              {/* <Header /> */}
+              <Sidebar />
               <Routes>
                 <Route path="/home" Component={HomePage} />
                 <Route path="/monthly-inventory" Component={MonthlyInventory} />
@@ -37,7 +38,7 @@ function App() {
                 {/* <Route path="/shopping-page" Component={ShoppingPage} /> */}
                 <Route path="customer-services" Component={CustomerContact} />
               </Routes>
-            </>
+            </div>
           }
         />
       </Routes>
