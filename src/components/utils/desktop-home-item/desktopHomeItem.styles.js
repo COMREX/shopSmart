@@ -42,8 +42,9 @@ export const ContentContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  width: 11.2rem;
-  min-height: 10.5rem;
+  width: 56%;
+  height: 60%;
+  /* min-height: 53.27%; */
   border-radius: 0.8rem;
   background-image: ${({ cover }) => `url(${cover})`};
   background-position: center;

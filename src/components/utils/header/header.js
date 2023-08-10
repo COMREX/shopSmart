@@ -1,8 +1,11 @@
 import { Wrapper, FlexWrapper, HeaderSVG } from "./header.styles";
 import SettingsToggle from "../settings-toggle/settingsToggle";
+import useScreenWidth from "../use-screen-width/useScreenWidth";
+import DesktopHeader from "../desktop-header/desktopHeader";
 
 const Header = ({ marginBottom }) => {
-  return (
+  const screenWidth = useScreenWidth();
+  return screenWidth < 768 ? (
     <Wrapper marginBottom={marginBottom}>
       <FlexWrapper>
         <SettingsToggle />
@@ -20,6 +23,8 @@ const Header = ({ marginBottom }) => {
         </HeaderSVG>
       </FlexWrapper>
     </Wrapper>
+  ) : (
+    <DesktopHeader />
   );
 };
 

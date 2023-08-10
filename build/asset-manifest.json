@@ -1,7 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.31d6cfe0.css",
+<<<<<<< Updated upstream
     "main.js": "/static/js/main.b1cd2e77.js",
+=======
+    "main.js": "/static/js/main.7877172a.js",
+>>>>>>> Stashed changes
     "static/media/home-cover-4.jpg": "/static/media/home-cover-4.f0f9cd7a1819018ac6ce.jpg",
     "static/media/home-cover-2.png": "/static/media/home-cover-2.c7fbdd1a09dd4fede6aa.png",
     "static/media/avatar.svg": "/static/media/avatar.a592d53c2010e16102975abbb56b9176.svg",
@@ -11,7 +15,6 @@
     "static/media/home-cover-3.jpg": "/static/media/home-cover-3.f9fbaca5912e151808f4.jpg",
     "static/media/metro.png": "/static/media/metro.7bdba0c6c3703981b435.png",
     "static/media/naheed.jpg": "/static/media/naheed.195a81435e8c6e104ad4.jpg",
-    "static/media/QRcode.svg": "/static/media/QRcode.ee535ac9ae6dd5ff018a2966319e1177.svg",
     "static/media/product-4.png": "/static/media/product-4.18e0f8b061fde1171c55.png",
     "static/media/product-2.png": "/static/media/product-2.ee78003effce032aff2e.png",
     "static/media/logo.svg": "/static/media/logo.88705243186d2a2a61aa3cebf83f7fe2.svg",
@@ -34,10 +37,18 @@
     "index.html": "/index.html",
     "static/media/fb.svg": "/static/media/fb.8fbee0e03cea328130e1507280a08229.svg",
     "static/media/dots-item.svg": "/static/media/dots-item.db1b88a706b37faa1c493047f70723a2.svg",
+<<<<<<< Updated upstream
     "main.b1cd2e77.js.map": "/static/js/main.b1cd2e77.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
     "static/js/main.b1cd2e77.js"
+=======
+    "main.7877172a.js.map": "/static/js/main.7877172a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.7877172a.js"
+>>>>>>> Stashed changes
   ]
 }

@@ -108,7 +108,8 @@ const AddInventory = () => {
             cover={data.ItemImg}
             svgIcon={menuIcon}
             date={data.date}
-            handleClick={() => handleDelete(data.id)}
+            handleClick={() => handleClick(data.id)}
+            handleDelete={() => handleDelete(data.id)}
             handleBlur={handleBlur}
             showDropdown={selectedItem === data.id}
             id={data.id}

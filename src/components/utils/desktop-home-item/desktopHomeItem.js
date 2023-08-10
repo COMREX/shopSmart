@@ -14,8 +14,10 @@ const DesktopItem = ({ itemName, imgUrl, path, numberOfStars }) => {
       <BackgroundWrapper>
         <ContentContainer>
           <ImageContainer cover={imgUrl} />
-          <h4>{itemName}</h4>
-          <StarsGenerator numberOfStars={numberOfStars} />
+          <div>
+            <h4>{itemName}</h4>
+            <StarsGenerator numberOfStars={numberOfStars} />
+          </div>
         </ContentContainer>
       </BackgroundWrapper>
     </ItemWrapper>

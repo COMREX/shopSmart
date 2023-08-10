@@ -2,28 +2,16 @@ import GridView from "../utils/grid-view/gridView";
 import HomeItem from "../utils/home-item/homeItem";
 import HomeData from "../../DATA/HOME_DATA";
 import DesktopItem from "../utils/desktop-home-item/desktopHomeItem";
-import { useEffect, useState } from "react";
+import useScreenWidth from "../utils/use-screen-width/useScreenWidth";
 
 const HomeItems = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const screenWidth = useScreenWidth();
 
   return (
     <div>
       <GridView>
         {HomeData.map((item) => {
-          return windowWidth < 768 ? (
+          return screenWidth < 768 ? (
             <HomeItem
               key={item.id}
               itemName={item.name}

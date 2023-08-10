@@ -21,34 +21,37 @@ const ListItem = ({
   numberOfStars,
   svgIcon,
   handleClick,
+  handleDelete,
   handleBlur,
   showDropdown,
 }) => {
   return (
-    <ListItemWrapper onBlur={handleBlur}>
-      <GapCotainer>
-        <CoverImageWrapper cover={cover} />
-        <DescriptionWrapper>
-          <h3>{heading}</h3>
-          <Para>{paragraph}</Para>
-          <p>{date}</p>
-          <StarsGenerator numberOfStars={numberOfStars} />
-        </DescriptionWrapper>
-      </GapCotainer>
+    <>
+      <ListItemWrapper>
+        <GapCotainer>
+          <CoverImageWrapper cover={cover} />
+          <DescriptionWrapper>
+            <h3>{heading}</h3>
+            <Para>{paragraph}</Para>
+            <p>{date}</p>
+            <StarsGenerator numberOfStars={numberOfStars} />
+          </DescriptionWrapper>
+        </GapCotainer>
 
-      <DesktopIcons>
-        <img src={EditIcon} alt="edit" />
-        <img src={DeleteIcon} alt="delete" />
-      </DesktopIcons>
+        <DesktopIcons>
+          <img src={EditIcon} alt="edit" />
+          <img src={DeleteIcon} alt="delete" onClick={() => handleDelete(id)} />
+        </DesktopIcons>
 
-      <MobileIcon
-        tabIndex={0}
-        onClick={() => handleClick(id)}
-        src={svgIcon}
-        alt="menu icon"
-      />
-      {showDropdown && <ListDropdown />}
-    </ListItemWrapper>
+        <MobileIcon
+          tabIndex={0}
+          onClick={() => handleClick(id)}
+          src={svgIcon}
+          alt="menu icon"
+        />
+        {showDropdown && <ListDropdown handleDelete={handleDelete} id={id} />}
+      </ListItemWrapper>
+    </>
   );
 };
 

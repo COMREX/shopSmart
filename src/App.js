@@ -13,11 +13,13 @@ import DiscountPage from "./pages/discountPage";
 import AddInventory from "./pages/addInventory";
 import ShoppingPage from "./pages/shoppingPage";
 import TestBar from "./components/text-sidebar/testNavbar";
+import Header from "./components/utils/header/header";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+
       <Routes>
         <Route path="/" Component={LoginSignupPage} />
 
@@ -25,6 +27,7 @@ function App() {
           path="/*"
           element={
             <>
+              <Header />
               {/* <TestBar /> */}
               <Routes>
                 <Route path="/home" Component={HomePage} />
