@@ -10,10 +10,8 @@ const Input = ({
   children,
   width,
   height,
-  widthMd,
-  heightMd,
-  widthSm,
-  heightSm,
+  border,
+  boxShadow,
 }) => {
   return (
     <InputWrapper
@@ -24,14 +22,10 @@ const Input = ({
       value={value}
       onChange={onChange}
       required
+      border={border}
+      boxShadow={boxShadow}
       width={width}
       height={height}
-      mediaQueries={{
-        widthMd: { widthMd },
-        widthSm: { widthSm },
-        heightMd: { heightMd },
-        heightSm: { heightSm },
-      }}
     >
       {children}
     </InputWrapper>

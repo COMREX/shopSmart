@@ -38,6 +38,7 @@ const SignUp = ({ handleClick }) => {
       <AuthHeader
         heading="Register your Account"
         paragraph="Fill in the form below correctly"
+        headerBg={"rgba(6, 145, 154, 0.38)"}
       />
       <SignupForm>
         <SignupInput

@@ -8,9 +8,9 @@ import {
 } from "./authHeader.styles";
 import cartIcon from "../../../Assets/svgs/Group.svg";
 import logo from "../../../Assets/svgs/logo.svg";
-const AuthHeader = ({ heading, paragraph }) => {
+const AuthHeader = ({ heading, paragraph, headerBg, height }) => {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper headerBg={headerBg} height={height}>
       <HeaderContent>
         <img src={logo} alt="" />
         <HeadingText>{heading}</HeadingText>

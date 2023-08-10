@@ -10,4 +10,14 @@ export const AuthContainer = styled.div`
 `;
 export const MainAuthContainer = styled.div`
   overflow: hidden;
+  display: none;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    display: block;
+  }
+`;
+export const DestopView = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    display: none;
+  }
 `;

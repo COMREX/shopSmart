@@ -28,6 +28,7 @@ const Login = ({ handleClick }) => {
         <AuthHeader
           heading={"Welcome to ShopSmart"}
           paragraph={"Fill Login form below correctly"}
+          headerBg={"rgba(6, 145, 154, 0.38)"}
         />
         <Form>
           <Input

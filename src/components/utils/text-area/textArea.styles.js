@@ -1,12 +1,13 @@
 import { styled } from "styled-components";
 
 export const TextAreaWrapper = styled.textarea`
-  width: 70%;
-  height: 10rem;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   font-size: ${(props) => props.theme.typography.fontSize.sm};
   border-radius: ${(props) => props.theme.spacing.xs};
-  background: ${(props) => props.theme.color.secondary};
+  background: ${(props) => props.TextBg};
   padding: ${(props) => props.theme.spacing.sm};
+  box-shadow: ${(props) => props.boxShadow};
   outline: none;
   border: none;
   &:focus {
