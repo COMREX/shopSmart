@@ -4,7 +4,9 @@ export const DesktopNavWrapper = styled.div`
   width: 100vw;
   height: 10vh;
   background-color: ${(props) => props.theme.color.primary};
-  padding:   8px 0px 0px 50px;
+ display: flex;
+ justify-content:center;
+ align-items: center;
  
 `;
 export const DesktopContentWrapper = styled.div`
@@ -19,16 +21,16 @@ export const NavLogo = styled.img`
 `
 
 export const NavRightItems = styled.div`
-     width: 40%;
+     
      display: flex;
      justify-content: space-between;
      align-items: center
  `
 export const NavLinks = styled.ul`
      display: flex;
-     justify-content:space-between;
+     gap:35px;
      list-style: none;
-     /* gap:78px; */
+   
     
      
      
@@ -58,9 +60,9 @@ export const NavButton = styled.button`
  `
 
 export const NavRightButtons = styled.div`
-     width: 40%;
+    
      display: flex;
-     justify-content: space-between
+    gap: 30px;
      
 
  `
