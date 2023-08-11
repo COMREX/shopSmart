@@ -26,7 +26,7 @@ function App() {
         <Route
           path="/*"
           element={
-            <div style={{ display: "flex", alignItems: "stretch" }}>
+            <div style={{ display: "flex" }}>
               {/* <Header /> */}
               <Sidebar />
               <Routes>

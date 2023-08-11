@@ -7,25 +7,20 @@ import { NavLI } from "../components/utils/desktop-header/desktopHeader.styles";
 
 const HomePage = () => {
   const buttonitemss = [
-       {key:1,  text: "Login"},
-       {key:1,  text: "Login"},
+    { key: 1, text: "Login" },
+    { key: 1, text: "Login" },
+  ];
 
-      
-  ]
-
-
-   
-  
   // const array = Array.from(buttonitems)
   return (
-    <>
+    <div>
       {/* <Header marginBottom="3rem" /> */}
       <DesktopHeader />
-         
+
       <ShopSmartHeading marginBottom="1rem" />
       <HomeItems />
       <Navigation />
-    </>
+    </div>
   );
 };
 
