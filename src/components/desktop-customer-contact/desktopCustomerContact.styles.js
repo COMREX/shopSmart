@@ -1,7 +1,10 @@
 import { styled } from "styled-components";
 
+export const CustomerMainWrapper = styled.div`
+  height: 100vh;
+  width: 100%;
+`;
 export const DesktopCustomerWrapper = styled.div`
-  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
