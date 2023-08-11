@@ -12,6 +12,10 @@ export const ItemName = styled.p`
   color: ${({ theme }) => theme.color.primary};
   margin: calc(${({ theme }) => theme.spacing.sm} - 0.1rem) 0;
   font-weight: calc(${({ theme }) => theme.typography.fontWeight.bold} - 100);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    font-size: ${({ theme }) => theme.typography.fontSize.xs};
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -23,8 +27,13 @@ export const ImageWrapper = styled.div`
   background-position: center;
   border-radius: 1rem;
 
-  @media (max-width: calc(${({ theme }) => theme.breakpoints.xs} + 40px)) {
-    width: 18rem;
-    height: 18rem;
+  @media (max-width: calc(${({ theme }) => theme.breakpoints.xs} + 50px)) {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    width: 10rem;
+    height: 10rem;
   }
 `;

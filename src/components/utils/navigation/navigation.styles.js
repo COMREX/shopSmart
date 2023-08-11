@@ -11,8 +11,14 @@ export const NavWrapper = styled.section`
   position: fixed;
   bottom: 0;
   z-index: 999;
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    padding: calc(${({ theme }) => theme.spacing.xs} + 0.4rem)
+      calc(${({ theme }) => theme.spacing.xl} - 1rem);
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    position: static;
+    display: none;
   }
 `;

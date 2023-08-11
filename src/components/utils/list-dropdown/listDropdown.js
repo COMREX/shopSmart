@@ -1,10 +1,10 @@
 import { DropdownWrapper, UList } from "./listDropdown.styles";
 
-const ListDropdown = () => {
+const ListDropdown = ({ handleDelete, id }) => {
   return (
     <DropdownWrapper>
       <UList>
-        <li>Delete</li>
+        <li onClick={() => handleDelete(id)}>Delete</li>
         <li>Rename</li>
         <li>Change</li>
       </UList>

@@ -12,10 +12,17 @@ export const GridContainer = styled.div`
   overflow: auto;
 
   @media (max-width: calc(${({ theme }) => theme.breakpoints.xs} + 40px)) {
-    justify-content: center;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     column-gap: 5rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding-bottom: 6.6rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    height: 80vh;
   }
 `;

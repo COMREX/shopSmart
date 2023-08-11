@@ -4,6 +4,10 @@ export const ShopSmartWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `;
 export const ShopSmartStyled = styled.h3`
   color: ${(props) => props.theme.color.primary};

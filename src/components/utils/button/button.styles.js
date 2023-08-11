@@ -8,8 +8,12 @@ export const ButtonWrapper = styled.button`
   color: ${(props) => props.color};
   cursor: pointer;
   outline: none;
+<<<<<<< HEAD
 
   font-size: ${(props) => props.theme.typography.fontSize.sm};
+=======
+  font-size: ${(props) => props.fontSize || props.theme.typography.fontSize.md};
+>>>>>>> a3ef60410eda20a1c82eb8b300688a5f5354c6a0
   font-family: ${(props) => props.theme.typography.fontFamily};
   font-weight: ${(props) => props.theme.typography.fontWeight.Regular};
   height: ${(props) => props.height};

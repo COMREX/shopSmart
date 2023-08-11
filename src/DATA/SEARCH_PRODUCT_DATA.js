@@ -11,9 +11,7 @@ const SearchProductData = [
     ItemHeading: "Sunslik Shampoo",
     ItemParagraph: "Grocery list",
     itemStar: 3,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
+
     date: "15/07/2023",
   },
   {
@@ -21,10 +19,6 @@ const SearchProductData = [
     ItemImg: facewash,
     ItemHeading: "Ponds facewash",
     ItemParagraph: "Grocery list",
-    itemStar: 4,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
   {
@@ -33,9 +27,6 @@ const SearchProductData = [
     ItemHeading: "Baby hand wash",
     ItemParagraph: "Grocery list",
     itemStar: 5,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
   {
@@ -44,9 +35,6 @@ const SearchProductData = [
     ItemHeading: "Sunslik Shampoo",
     ItemParagraph: "Grocery list",
     itemStar: 3,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
   {
@@ -54,10 +42,6 @@ const SearchProductData = [
     ItemImg: facewash,
     ItemHeading: "Ponds facewash",
     ItemParagraph: "Grocery list",
-    itemStar: 4,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
   {
@@ -66,9 +50,6 @@ const SearchProductData = [
     ItemHeading: "Baby hand wash",
     ItemParagraph: "Grocery list",
     itemStar: 5,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
   {
@@ -76,10 +57,6 @@ const SearchProductData = [
     ItemImg: facewash,
     ItemHeading: "Ponds facewash",
     ItemParagraph: "Grocery list",
-    itemStar: 4,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
   {
@@ -88,9 +65,6 @@ const SearchProductData = [
     ItemHeading: "Baby hand wash",
     ItemParagraph: "Grocery list",
     itemStar: 5,
-    ItemWhishlist: whishList,
-    ItemWishlishFill: wishListFill,
-    ItemMenuIcon: menuIcon,
     date: "15/07/2023",
   },
 ];
