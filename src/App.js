@@ -42,8 +42,8 @@ function App() {
             //   "@media(max-width: 768px)": { display: "none" },
             // }}
             >
-              {/* <Header /> */}
               <Sidebar />
+              <Header />
               <Routes>
                 <Route path="/home" Component={HomePage} />
                 <Route path="/monthly-inventory" Component={MonthlyInventory} />

@@ -42,7 +42,7 @@ const Sidebar = () => {
       </SidebarList>
       <HorizontalLine />
       <SettingList>
-        <Ul>
+        <Ul style={{ gap: "0.5rem" }}>
           <Li>Setting</Li>
           <Li>help</Li>
         </Ul>

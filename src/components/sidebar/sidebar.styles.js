@@ -1,10 +1,10 @@
 import { styled } from "styled-components";
 
 export const SidebarWrapper = styled.div`
-  height: 100vh;
+  height: 90vh;
   width: 22vw;
   margin-top: 10vh;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -20,12 +20,13 @@ export const SidebarLogo = styled.img`
 export const LogoInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 4.5rem;
+  row-gap: 3.5rem;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 `;
 export const SidebarList = styled.div`
-  height: 50vh;
+  height: 43vh;
+  /* height: 26rem; */
   width: 100%;
   overflow: auto;
 `;
@@ -35,26 +36,28 @@ export const HorizontalLine = styled.div`
 export const Ul = styled.ul`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   align-items: center;
   justify-content: center;
 `;
 export const Li = styled.li`
-  background-color: ${({ isActive }) => (isActive ? "skyblue" : "transparent")};
+  background-color: ${({ theme, isActive }) =>
+    isActive ? theme.color.primaryDisabled : "transparent"};
   padding-left: 1rem;
   width: 80%;
-  height: 5.3rem;
+  height: 5rem;
+  border-radius: 0.4rem;
   display: flex;
   align-items: center;
   color: rgba(0, 0, 0, 0.53);
   font-size: ${({ theme }) => theme.typography.fontSize.sm};
   font-style: normal;
   font-weight: calc(${({ theme }) => theme.typography.fontWeight.medium} + 100);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   cursor: pointer;
   transition: background-color 0.6s ease-in-out;
   &:hover {
-    background-color: skyblue;
+    background-color: ${({ theme }) => theme.color.primaryDisabled};
   }
 `;
 
