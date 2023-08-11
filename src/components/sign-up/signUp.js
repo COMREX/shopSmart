@@ -6,6 +6,7 @@ import {
   SignupIcons,
   SignupWrapper,
   Text,
+  SignupInput,
 } from "./signUp.styles";
 import AuthHeader from "../utils/auth-header/authHeader";
 import Input from "../utils/input/input";
@@ -37,37 +38,34 @@ const SignUp = ({ handleClick }) => {
       <AuthHeader
         heading="Register your Account"
         paragraph="Fill in the form below correctly"
+        headerBg={"rgba(6, 145, 154, 0.38)"}
       />
       <SignupForm>
-        <Input
+        <SignupInput
           type={"text"}
           placeholder={"Full Name"}
           required
-          InputBg={`${(props) => props.color.semiwhite}`}
           value={formData.fullname}
           onChange={handleChange}
         />
-        <Input
+        <SignupInput
           type={"text"}
           placeholder={"Username"}
           required
-          InputBg={`${(props) => props.color.semiwhite}`}
           value={formData.username}
           onChange={handleChange}
         />
-        <Input
+        <SignupInput
           type={"email"}
           placeholder={"Email"}
           required
-          InputBg={`${(props) => props.color.semiwhite}`}
           value={formData.email}
           onChange={handleChange}
         />
-        <Input
+        <SignupInput
           type={"password"}
           placeholder={"Password"}
           required
-          InputBg={`${(props) => props.color.semiwhite}`}
           value={formData.password}
           onChange={handleChange}
         />
@@ -80,8 +78,8 @@ const SignUp = ({ handleClick }) => {
           </SignupIcons>
           <Button
             activeColor={"#000"}
-            width={"11rem"}
-            height={"5rem"}
+            width="9rem"
+            height="4.5rem"
             bg={(props) => props.theme.color.primary}
             color={(props) => props.theme.color.white}
           >

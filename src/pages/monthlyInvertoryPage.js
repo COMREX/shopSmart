@@ -18,7 +18,7 @@ const MonthlyInventory = () => {
     setGridView(!gridView);
   };
   return (
-    <>
+    <div style={{ marginTop: "10vh", flexGrow: 1 }}>
       <Header marginBottom="4rem" />
       <SearchWrapper>
         <SearchInput placeholder="Seach Your List" />
@@ -44,7 +44,7 @@ const MonthlyInventory = () => {
       )}
 
       <Navigation />
-    </>
+    </div>
   );
 };
 

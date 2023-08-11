@@ -15,6 +15,11 @@ export const BackgroundWrapper = styled.div`
   width: 100%;
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.color.secondary};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    background-color: ${({ theme }) => theme.color.white};
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+  }
 `;
 
 export const ContentContainer = styled.div`

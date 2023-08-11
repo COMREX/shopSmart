@@ -2,9 +2,14 @@ import { styled } from "styled-components";
 
 export const SidebarWrapper = styled.div`
   height: 100vh;
-  width: 29.5rem;
+  width: 22vw;
+  margin-top: 10vh;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `;
 export const SidebarLogo = styled.img`
   width: 6.6rem;

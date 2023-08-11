@@ -8,6 +8,10 @@ const Input = ({
   onChange,
   name,
   children,
+  width,
+  height,
+  border,
+  boxShadow,
 }) => {
   return (
     <InputWrapper
@@ -18,6 +22,10 @@ const Input = ({
       value={value}
       onChange={onChange}
       required
+      border={border}
+      boxShadow={boxShadow}
+      width={width}
+      height={height}
     >
       {children}
     </InputWrapper>

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import LogIn from "../components/log-in/logIn";
 import SignUp from "../components/sign-up/signUp";
+import DesktopAuthBg from "../components/desktop-auth-bg/desktopAuthBg";
 import {
   AuthContainer,
+  DestopView,
   MainAuthContainer,
 } from "./styles/loginSignupPage.styles";
 
@@ -12,12 +14,17 @@ const LoginSignupPage = () => {
     setIsLoginVisible(!isLoginVisible);
   };
   return (
-    <MainAuthContainer>
-      <AuthContainer isLoginVisible={isLoginVisible}>
-        <LogIn handleClick={handleClick} />
-        <SignUp handleClick={handleClick} />
-      </AuthContainer>
-    </MainAuthContainer>
+    <>
+      <MainAuthContainer>
+        <AuthContainer isLoginVisible={isLoginVisible}>
+          <LogIn handleClick={handleClick} />
+          <SignUp handleClick={handleClick} />
+        </AuthContainer>
+      </MainAuthContainer>
+      <DestopView>
+        <DesktopAuthBg />
+      </DestopView>
+    </>
   );
 };
 

@@ -1,9 +1,20 @@
 import { styled } from "styled-components";
 
+export const CustomerContactWrapper = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const DesktopViewCustomerContact = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 export const Form = styled.form`
   display: flex;
   overflow: scroll;
-  height: 80vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;

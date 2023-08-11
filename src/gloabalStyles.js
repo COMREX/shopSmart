@@ -16,7 +16,11 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: ${(props) => props.theme.typography.fontFamily};
-        background-color: ${({ theme }) => theme.color.white};
+        background-color: ${({ theme }) => theme.color.bodyMobile};
+
+        @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+            background-color: ${({ theme }) => theme.color.bodyDesktop};
+        }
         
     }
 `;
