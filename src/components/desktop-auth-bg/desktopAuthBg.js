@@ -21,7 +21,13 @@ const DesktopAuthBg = () => {
       <LandingWrapperOpacity>
         <AuthContentWrapper>
           {toggle ? (
-            <div style={{ width: "100%", height: "100%" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <DesktopLoginSignup handleCross={handleCross} />
             </div>
           ) : (

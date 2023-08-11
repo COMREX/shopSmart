@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const DesktopLoginSignupWrapper = styled.div`
-  width: 72rem;
+  width: 50%;
   height: 51rem;
   background-color: #fafefe;
   display: flex;
