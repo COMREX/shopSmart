@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, styled } from "styled-components";
 import theme from "./theme";
 import GlobalStyles from "./gloabalStyles";
 import LoginSignupPage from "./pages/loginSignupPage";
@@ -15,6 +15,16 @@ import TestBar from "./components/text-sidebar/testNavbar";
 import Header from "./components/utils/header/header";
 import Sidebar from "./components/sidebar/sidebar";
 
+const Layout = styled.div`
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -26,7 +36,12 @@ function App() {
         <Route
           path="/*"
           element={
-            <div style={{ display: "flex" }}>
+            <Layout
+            // style={{
+            //   display: "flex",
+            //   "@media(max-width: 768px)": { display: "none" },
+            // }}
+            >
               {/* <Header /> */}
               <Sidebar />
               <Routes>
@@ -38,7 +53,7 @@ function App() {
                 {/* <Route path="/shopping-page" Component={ShoppingPage} /> */}
                 <Route path="customer-services" Component={CustomerContact} />
               </Routes>
-            </div>
+            </Layout>
           }
         />
       </Routes>

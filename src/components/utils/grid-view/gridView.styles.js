@@ -11,9 +11,6 @@ export const GridContainer = styled.div`
   margin-bottom: ${({ marginBottom }) => marginBottom || 0};
   overflow: auto;
 
-  @media (max-width: calc(${({ theme }) => theme.breakpoints.xs} + 40px)) {
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     column-gap: 5rem;
   }

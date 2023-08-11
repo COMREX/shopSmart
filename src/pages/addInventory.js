@@ -64,7 +64,7 @@ const AddInventory = () => {
   };
 
   return (
-    <>
+    <div style={{ flexGrow: 1 }}>
       <Header marginBottom="4.8rem" />
       <ShopSmartHeading marginBottom="1.3rem" />
       <QRcodeWrappr>
@@ -117,7 +117,7 @@ const AddInventory = () => {
         ))}
       </ListView>
       <Navigation />
-    </>
+    </div>
   );
 };
 
