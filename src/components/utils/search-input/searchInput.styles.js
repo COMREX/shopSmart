@@ -50,13 +50,8 @@ export const SearchInputStyled = styled.input`
     borderRadius || theme.spacing.xxl};
   border: none;
   outline: none;
-<<<<<<< HEAD
   padding-right: 1rem;
   @media (max-width: 620px) {
-=======
-  padding: 1rem;
-  /* @media (max-width: 620px) {
->>>>>>> a3ef60410eda20a1c82eb8b300688a5f5354c6a0
     width: 75%;
   }
   @media (max-width: 480px) {
@@ -64,7 +59,7 @@ export const SearchInputStyled = styled.input`
   }
   @media (max-width: 427px) {
     width: 65%;
-  } */
+  }
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     /* padding-right: 2rem; */
     /* width: ${(props) => props.width || "90%"}; */
