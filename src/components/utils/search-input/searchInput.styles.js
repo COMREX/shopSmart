@@ -8,27 +8,24 @@ export const SearchInputWrapper = styled.div`
   border-radius: calc(
     ${({ theme, borderRadius }) => borderRadius || theme.spacing.xxs} + 0.1rem
   );
-  box-shadow: ${({ boxShadow }) =>
-    boxShadow || "2px 2px 15px 0px rgba(0, 0, 0, 0.25)"};
-  /* gap: calc(${({ theme }) => theme.spacing.sm} - 0.2rem); */
-  /* gap: 2.5rem; */
-  gap: 2.5rem;
+  box-shadow: ${({ boxShadow }) => boxShadow || "none"};
+  gap: ${({ gap }) => gap || "2.5rem"};
   display: flex;
   align-items: center;
   justify-content: space-between;
   @media (max-width: ${({ theme }) => theme.breakpoints.xxs}) {
-    gap: calc(${({ theme }) => theme.spacing.xs});
+    gap: 1rem;
+    /* gap: calc(${({ theme }) => theme.spacing.xs}); */
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     /* gap: calc(${({ theme }) => theme.spacing.xl} - 0.8rem); */
-    border-radius: calc(${({ theme }) => theme.spacing.md} - 0.2rem);
     background-color: ${({ theme, backgroundColor }) =>
       backgroundColor || theme.color.white};
-    box-shadow: ${({ boxShadow }) => boxShadow || "none"};
-    /* box-shadow: ${({ boxShadow }) =>
-      boxShadow || "2px 2px 15px 0px rgba(0, 0, 0, 0.25)"}; */
+    box-shadow: ${({ boxShadow }) =>
+      boxShadow || "2px 2px 15px 0px rgba(0, 0, 0, 0.25)"};
+
     border-radius: calc(
-      ${({ theme, borderRadius }) => borderRadius || theme.spacing.xxs} + 0.1rem
+      ${({ theme, borderRadius }) => borderRadius || theme.spacing.md} - 0.2rem
     );
   }
 `;
@@ -47,11 +44,11 @@ export const SearchInputStyled = styled.input`
   font-style: normal;
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
   border-radius: ${({ theme, borderRadius }) =>
-    borderRadius || theme.spacing.xxl};
+    borderRadius || theme.spacing.xxs};
   border: none;
   outline: none;
   padding-right: 1rem;
-  @media (max-width: 620px) {
+  /* @media (max-width: 620px) {
     width: 75%;
   }
   @media (max-width: 480px) {
@@ -59,16 +56,16 @@ export const SearchInputStyled = styled.input`
   }
   @media (max-width: 427px) {
     width: 65%;
-  }
+  } */
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    /* padding-right: 2rem; */
+    padding-right: 1.5rem;
     /* width: ${(props) => props.width || "90%"}; */
 
     font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
     background-color: ${({ theme, backgroundColor }) =>
       backgroundColor || theme.color.white};
     border-radius: calc(
-      ${({ theme, borderRadius }) => borderRadius || theme.spacing.xxl} + 0.2rem
+      ${({ theme, borderRadius }) => borderRadius || theme.spacing.md} - 0.2rem
     );
   }
 `;

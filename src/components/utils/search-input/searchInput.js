@@ -14,12 +14,16 @@ const SearchInput = ({
   borderRadius,
   backgroundColor,
   boxShadow,
+  gap,
 }) => {
   return (
     <SearchInputWrapper
+      boxShadow={boxShadow}
       borderRadius={borderRadius}
       backgroundColor={backgroundColor}
-      style={{ marginBottom }}
+      marginBottom={marginBottom}
+      // style={{ marginBottom }}
+      gap={gap}
     >
       <SearchIconStyled
         xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +44,7 @@ const SearchInput = ({
         width={width}
         borderRadius={borderRadius}
         backgroundColor={backgroundColor}
-        style={{ boxShadow: boxShadow || "none" }}
+        boxShadow={boxShadow}
       />
     </SearchInputWrapper>
   );

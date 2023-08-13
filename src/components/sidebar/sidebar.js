@@ -25,6 +25,8 @@ const Sidebar = () => {
           borderRadius="0.2rem"
           backgroundColor={(props) => props.theme.color.secondary}
           placeholder="search here"
+          boxShadow="none"
+          gap="1.5rem"
         />
       </LogoInputWrapper>
       <SidebarList>
