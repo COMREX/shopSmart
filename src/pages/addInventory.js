@@ -72,7 +72,11 @@ const AddInventory = () => {
       </QRcodeWrappr>
       <SearchInputWrapprForCenter>
         <SearchInputWrappr>
-          <SearchInput placeholder="Add List" marginBottom="4.4rem" />
+          <SearchInput
+            placeholder="Add List"
+            marginBottom="4.4rem"
+            boxShadow="2px 2px 15px 0px rgba(0, 0, 0, 0.25)"
+          />
           <Button
             height="3.7rem"
             width="6rem"

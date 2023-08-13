@@ -5,6 +5,7 @@ export const SearchWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   margin: 0 auto calc(${({ theme }) => theme.spacing.lg} + 0.8rem);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
