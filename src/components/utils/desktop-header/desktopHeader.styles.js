@@ -12,6 +12,7 @@ export const DesktopNavWrapper = styled.div`
   top: 0%;
   left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 10vh;
 `;
 export const DesktopContentWrapper = styled.div`
   width: 80%;

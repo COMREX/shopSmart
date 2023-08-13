@@ -9,6 +9,7 @@ export const ItemWrapper = styled.div`
   margin-bottom: calc(${({ theme }) => theme.spacing.sm} + 0.2rem);
   text-align: center;
   cursor: pointer;
+  margin: auto auto;
 `;
 
 export const BackgroundWrapper = styled.div`
@@ -43,7 +44,7 @@ export const ContentContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 56%;
-  height: 60%;
+  height: 57%;
   /* min-height: 53.27%; */
   border-radius: 0.8rem;
   background-image: ${({ cover }) => `url(${cover})`};

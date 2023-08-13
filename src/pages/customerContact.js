@@ -46,7 +46,7 @@ const CustomerContact = () => {
   return (
     <>
       <CustomerContactWrapper>
-        <Header />
+        {/* <Header /> */}
         <Form onSubmit={handleSubmit}>
           <ParagraphText>Give Feedback or Contact with Us</ParagraphText>
           <Input

@@ -2,17 +2,17 @@ import { styled } from "styled-components";
 
 export const SidebarWrapper = styled.div`
   height: 90vh;
-  width: 22vw;
-  margin-top: 10vh;
+  width: 20vw;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  flex: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     display: none;
   }
 `;
 export const SidebarLogo = styled.img`
-  width: 6.6rem;
+  width: 5rem;
   height: 5.5rem;
   margin-top: 1.8rem;
 `;
@@ -45,7 +45,7 @@ export const Li = styled.li`
     isActive ? theme.color.primaryDisabled : "transparent"};
   padding-left: 1rem;
   width: 80%;
-  height: 5rem;
+  height: 4.5rem;
   border-radius: 0.4rem;
   display: flex;
   align-items: center;

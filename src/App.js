@@ -19,9 +19,12 @@ const Layout = styled.div`
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+  padding-top: 10vh;
 
   @media (max-width: 768px) {
     display: block;
+    padding-top: 0;
   }
 `;
 
@@ -36,14 +39,9 @@ function App() {
         <Route
           path="/*"
           element={
-            <Layout
-            // style={{
-            //   display: "flex",
-            //   "@media(max-width: 768px)": { display: "none" },
-            // }}
-            >
-              <Sidebar />
+            <Layout>
               <Header />
+              <Sidebar />
               <Routes>
                 <Route path="/home" Component={HomePage} />
                 <Route path="/monthly-inventory" Component={MonthlyInventory} />

@@ -5,12 +5,12 @@ import ShopSmartHeading from "../components/utils/shop-smart-heading/shopSmartHe
 
 const DiscountPage = () => {
   return (
-    <>
-      <Header marginBottom="3.5rem" />
+    <div>
+      {/* <Header marginBottom="3.5rem" /> */}
       <ShopSmartHeading marginBottom="1.3rem" />
       <DiscountPageItems />
       <Navigation />
-    </>
+    </div>
   );
 };
 

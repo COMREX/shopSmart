@@ -16,7 +16,7 @@ const GroceryListPage = () => {
   };
   return (
     <>
-      <Header marginBottom="3.2rem" />
+      {/* <Header marginBottom="3.2rem" /> */}
       <SearchWrapper>
         <SearchInput placeholder="Search Your Grocery" />
         <img src={editSVG} alt="edit" />

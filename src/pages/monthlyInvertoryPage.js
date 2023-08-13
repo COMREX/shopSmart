@@ -19,7 +19,7 @@ const MonthlyInventory = () => {
   };
   return (
     <div style={{ marginTop: "10vh", flexGrow: 1 }}>
-      <Header marginBottom="4rem" />
+      {/* <Header marginBottom="4rem" /> */}
       <SearchWrapper>
         <SearchInput placeholder="Seach Your List" />
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
