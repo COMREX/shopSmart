@@ -10,8 +10,6 @@ import MonthlyInventory from "./pages/monthlyInvertoryPage";
 import GroceryListPage from "./pages/groceryListPage";
 import DiscountPage from "./pages/discountPage";
 import AddInventory from "./pages/addInventory";
-import ShoppingPage from "./pages/shoppingPage";
-import TestBar from "./components/text-sidebar/testNavbar";
 import Header from "./components/utils/header/header";
 import Sidebar from "./components/sidebar/sidebar";
 
