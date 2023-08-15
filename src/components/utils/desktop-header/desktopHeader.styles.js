@@ -40,6 +40,7 @@ export const NavLI = styled.li`
   font-size: ${(props) => props.theme.typography.fontSize.sm};
   font-weight: ${(props) => props.theme.typography.fontWeight.semiBold};
   color: ${(props) => props.theme.color.white};
+  cursor: pointer;
 `;
 export const NavButton = styled.button`
   width: 5vw;
@@ -52,6 +53,7 @@ export const NavButton = styled.button`
   font-family: ${(props) => props.theme.typography.fontFamily};
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 `;
 
 export const NavRightButtons = styled.div`

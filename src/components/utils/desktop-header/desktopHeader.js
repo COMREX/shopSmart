@@ -10,8 +10,10 @@ import {
   NavRightItems,
 } from "./desktopHeader.styles";
 import Navlogo from "../../../Assets/svgs/logo.svg";
+import { useNavigate } from "react-router-dom";
 const DesktopHeader = () => {
   const [Islogin, SetisLogin] = useState(false);
+  const navigate = useNavigate();
 
   const HandleLogin = () => {
     SetisLogin(true);
@@ -23,14 +25,16 @@ const DesktopHeader = () => {
   return (
     <DesktopNavWrapper>
       <DesktopContentWrapper>
-        <NavLogo src={Navlogo} alt="img" />
+        <NavLogo src={Navlogo} alt="img" onClick={() => navigate("/home")} />
 
         <NavRightItems>
           {Islogin && (
             <NavLinks>
-              <NavLI>HOME</NavLI>
+              <NavLI onClick={() => navigate("/home")}>HOME</NavLI>
               <NavLI>ABOUT</NavLI>
-              <NavLI>CONTACT</NavLI>
+              <NavLI onClick={() => navigate("/customer-services")}>
+                CONTACT
+              </NavLI>
             </NavLinks>
           )}
 
