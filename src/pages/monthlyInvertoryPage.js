@@ -18,7 +18,13 @@ const MonthlyInventory = () => {
     setGridView(!gridView);
   };
   return (
-    <div style={{ marginTop: "10vh", flexGrow: 1 }}>
+    <div
+      style={{
+        marginTop: "10vh",
+        flexGrow: 1,
+        "@media(min-width: 768px)": { display: "none" },
+      }}
+    >
       {/* <Header marginBottom="4rem" /> */}
       <SearchWrapper>
         <SearchInput placeholder="Seach Your List" />

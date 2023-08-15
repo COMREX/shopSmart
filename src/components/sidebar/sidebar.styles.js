@@ -42,22 +42,25 @@ export const Ul = styled.ul`
 `;
 export const Li = styled.li`
   background-color: ${({ theme, isActive }) =>
-    isActive ? theme.color.primaryDisabled : "transparent"};
+    isActive ? theme.color.primary : "transparent"};
   padding-left: 1rem;
   width: 80%;
   height: 4.5rem;
   border-radius: 0.4rem;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.53);
+  color: ${({ theme, isActive }) =>
+    isActive ? theme.color.white : "rgba(0, 0, 0, 0.53)"};
+
   font-size: ${({ theme }) => theme.typography.fontSize.sm};
   font-style: normal;
   font-weight: calc(${({ theme }) => theme.typography.fontWeight.medium} + 100);
   /* text-transform: uppercase; */
   cursor: pointer;
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   &:hover {
-    background-color: ${({ theme }) => theme.color.primaryDisabled};
+    background-color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.white};
   }
 `;
 

@@ -12,11 +12,15 @@ import React, { useState } from "react";
 import SidebarLogoSvg from "../../Assets/svgs/sidebar-logo.svg";
 import SearchInput from "../utils/search-input/searchInput";
 import SidebarData from "../../DATA/SIDEBAR_DATA";
+import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
+  const navigate = useNavigate();
   const [activeId, setActiveId] = useState(null);
-  const handleItemClick = (id) => {
+  const handleItemClick = (id, path) => {
     setActiveId(id);
+    navigate(path);
   };
+  console.log(window.innerWidth);
   return (
     <SidebarWrapper>
       <LogoInputWrapper>
@@ -34,7 +38,7 @@ const Sidebar = () => {
           <Ul>
             <Li
               isActive={item.id === activeId}
-              onClick={() => handleItemClick(item.id)}
+              onClick={() => handleItemClick(item.id, item.path)}
               id={item.id}
             >
               {item.list}

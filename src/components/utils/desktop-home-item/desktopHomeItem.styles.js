@@ -5,11 +5,12 @@ export const ItemWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   height: 21.4rem;
-  width: 20rem;
+  width: 20.4rem;
   margin-bottom: calc(${({ theme }) => theme.spacing.sm} + 0.2rem);
   text-align: center;
   cursor: pointer;
   margin: auto auto;
+  flex: 0 0 25%;
 `;
 
 export const BackgroundWrapper = styled.div`
