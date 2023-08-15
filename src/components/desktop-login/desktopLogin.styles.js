@@ -1,11 +1,14 @@
 import { styled } from "styled-components";
 import sideImage from "../../Assets/images/desktop-login-page.png";
 
-export const SigninWrapper = styled.div``;
+export const SigninWrapper = styled.div`
+  width: 50%;
+`;
 export const DesktopLoginWrapper = styled.div`
   width: 72rem;
   height: 51rem;
   display: flex;
+  justify-content: center;
   overflow: hidden;
 `;
 
@@ -38,4 +41,14 @@ export const WrapperRightSide = styled.div`
   width: 50%;
   background-image: url(${sideImage});
   object-fit: cover;
+  @media (max-height: calc(${(props) => props.theme.breakpoints.sm} + 100px)) {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-height: ${(props) => props.theme.breakpoints.sm}) {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;

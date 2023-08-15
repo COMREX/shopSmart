@@ -1,16 +1,12 @@
 import { styled } from "styled-components";
 
-export const CustomerContactWrapper = styled.div`
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
+export const CustomerContactWrapper = styled.div``;
 
 export const DesktopViewCustomerContact = styled.div`
-  @media (max-width: 768px) {
-    display: none;
-  }
+  display: flex;
+  flex-grow: 1;
+  padding-top: 5rem;
+  overflow: hidden;
 `;
 export const Form = styled.form`
   display: flex;

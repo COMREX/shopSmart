@@ -17,6 +17,7 @@ export const LandingWrapperOpacity = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 10rem;
+  overflow: hidden;
 `;
 export const AuthContentWrapper = styled.div`
   display: flex;

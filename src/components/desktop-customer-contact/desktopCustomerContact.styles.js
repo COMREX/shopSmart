@@ -1,5 +1,9 @@
 import { styled } from "styled-components";
 
+export const CustomerMainWrapper = styled.div`
+  height: auto;
+  width: 100%;
+`;
 export const DesktopCustomerWrapper = styled.div`
   display: flex;
   flex-direction: column;

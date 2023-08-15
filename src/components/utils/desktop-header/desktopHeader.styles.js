@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const DesktopNavWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   max-width: 1440px;
   height: 10vh;
   background-color: ${(props) => props.theme.color.primary};
@@ -39,6 +39,7 @@ export const NavLI = styled.li`
   font-size: ${(props) => props.theme.typography.fontSize.sm};
   font-weight: ${(props) => props.theme.typography.fontWeight.semiBold};
   color: ${(props) => props.theme.color.white};
+  cursor: pointer;
 `;
 export const NavButton = styled.button`
   width: 5vw;
@@ -51,6 +52,7 @@ export const NavButton = styled.button`
   font-family: ${(props) => props.theme.typography.fontFamily};
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 `;
 
 export const NavRightButtons = styled.div`
