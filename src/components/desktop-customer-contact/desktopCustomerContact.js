@@ -11,12 +11,14 @@ import Input from "../utils/input/input";
 import TextArea from "../utils/text-area/textArea";
 import Button from "../utils/button/button";
 import Header from "../utils/header/header";
+import { useNavigate } from "react-router-dom";
 const DesktopCustomerContact = ({
   isSubmitButtonDisabled,
   handleChange,
   handleSubmit,
   formData,
 }) => {
+  const navigate = useNavigate();
   return (
     <>
       <CustomerMainWrapper>
@@ -62,6 +64,7 @@ const DesktopCustomerContact = ({
               width={"11rem"}
               height={"5rem"}
               bg={(props) => props.theme.color.secondary}
+              onClick={() => navigate("/")}
             >
               Cancel
             </Button>
@@ -74,7 +77,7 @@ const DesktopCustomerContact = ({
               disabled={isSubmitButtonDisabled}
               width={"11rem"}
               height={"5rem"}
-              onClick={handleSubmit}
+              onClick={() => navigate("/home")}
               color={"white"}
             >
               Send

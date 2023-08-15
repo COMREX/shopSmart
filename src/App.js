@@ -27,7 +27,7 @@ function App() {
           path="/*"
           element={
             <div style={{ display: "flex" }}>
-              {/* <Header /> */}
+              <Header />
               <Sidebar />
               <Routes>
                 <Route path="/home" Component={HomePage} />

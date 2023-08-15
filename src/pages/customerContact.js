@@ -47,7 +47,7 @@ const CustomerContact = () => {
 
   return (
     <>
-      {screenWidth < 768 ? (
+      {screenWidth <= 768 ? (
         <CustomerContactWrapper>
           <Header />
           <Form onSubmit={handleSubmit}>

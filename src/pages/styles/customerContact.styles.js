@@ -5,7 +5,7 @@ export const CustomerContactWrapper = styled.div``;
 export const DesktopViewCustomerContact = styled.div`
   display: flex;
   flex-grow: 1;
-  padding-top: 10vh;
+  /* padding-top: 15vh; */
 `;
 export const Form = styled.form`
   display: flex;
