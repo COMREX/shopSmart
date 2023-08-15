@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div>
       {/* <Header marginBottom="3rem" /> */}
-      <DesktopHeader />
+      {/* <DesktopHeader /> */}
 
       <ShopSmartHeading marginBottom="1rem" />
       <HomeItems />

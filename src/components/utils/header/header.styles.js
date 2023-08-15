@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 7.5rem;
   width: 100vw;
   background-color: ${({ theme }) => theme.color.primary};

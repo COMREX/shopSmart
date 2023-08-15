@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const DesktopNavWrapper = styled.div`
   width: 100vw;
+  max-width: 1440px;
   height: 10vh;
   background-color: ${(props) => props.theme.color.primary};
   display: flex;
@@ -9,7 +10,9 @@ export const DesktopNavWrapper = styled.div`
   align-items: center;
   position: absolute;
   top: 0%;
-  left: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10vh;
 `;
 export const DesktopContentWrapper = styled.div`
   width: 80%;
