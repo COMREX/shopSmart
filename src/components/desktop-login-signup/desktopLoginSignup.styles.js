@@ -9,11 +9,20 @@ export const DesktopLoginSignupWrapper = styled.div`
   border: 0.2rem solid rgba(6, 145, 154, 0.8);
   overflow: hidden;
   position: relative;
+  @media (max-height: calc(${(props) => props.theme.breakpoints.sm} + 100px)) {
+    height: 48rem;
+  }
+  @media (max-height: ${(props) => props.theme.breakpoints.sm}) {
+    height: 45rem;
+  }
+  @media (max-height: calc(${(props) => props.theme.breakpoints.sm} - 40px)) {
+    height: 42rem;
+  }
 `;
 export const CancelWrapper = styled.div`
   position: absolute;
   top: 1.5rem;
-  right: 0;
+  right: 1.5rem;
 `;
 export const WrapperLeftSide = styled.div`
   width: 100%;

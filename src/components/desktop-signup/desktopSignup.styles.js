@@ -29,6 +29,14 @@ export const DesktopSignupForm = styled.form`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  @media (max-height: calc(${(props) => props.theme.breakpoints.sm} + 100px)) {
+    padding-top: 1rem;
+    gap: 0.7rem;
+  }
+  @media (max-height: ${(props) => props.theme.breakpoints.sm}) {
+    padding-top: 0.5rem;
+    gap: 0.4rem;
+  }
 `;
 export const SignupIcons = styled.div`
   display: flex;
@@ -51,4 +59,14 @@ export const WrapperRightSide = styled.div`
   width: 50%;
   height: 100%;
   background-image: url(${sideImage});
+  @media (max-height: calc(${(props) => props.theme.breakpoints.sm} + 100px)) {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-height: ${(props) => props.theme.breakpoints.sm}) {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;

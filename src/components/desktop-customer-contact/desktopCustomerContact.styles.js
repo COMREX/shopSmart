@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const CustomerMainWrapper = styled.div`
-  height: 100vh;
+  height: auto;
   width: 100%;
 `;
 export const DesktopCustomerWrapper = styled.div`

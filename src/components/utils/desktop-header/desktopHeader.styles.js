@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const DesktopNavWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   max-width: 1440px;
   height: 10vh;
   background-color: ${(props) => props.theme.color.primary};
