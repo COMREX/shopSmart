@@ -20,7 +20,7 @@ const Sidebar = () => {
     setActiveId(id);
     navigate(path);
   };
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   return (
     <SidebarWrapper>
       <LogoInputWrapper>

@@ -20,7 +20,7 @@ const MonthlyInventory = () => {
   return (
     <div
       style={{
-        marginTop: "10vh",
+        marginTop: "7vh",
         flexGrow: 1,
         "@media(min-width: 768px)": { display: "none" },
       }}

@@ -14,6 +14,7 @@ import ShoppingPage from "./pages/shoppingPage";
 import TestBar from "./components/text-sidebar/testNavbar";
 import Header from "./components/utils/header/header";
 import Sidebar from "./components/sidebar/sidebar";
+import Setting from "./components/settings/setting";
 
 const Layout = styled.div`
   display: flex;
