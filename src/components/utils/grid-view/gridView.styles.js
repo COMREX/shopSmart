@@ -5,7 +5,8 @@ export const GridContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 3rem;
+  gap: 3rem;
+  /* column-gap: 3rem; */
   padding: 0 calc(${({ theme }) => theme.spacing.lg} + 0.3rem);
   /* height: ${({ height }) => height || "auto"}; */
   height: calc(90vh - 200px);
@@ -21,6 +22,8 @@ export const GridContainer = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    height: 80vh;
+    height: 70vh;
+    column-gap: 10rem;
+    /* gap: 3rem; */
   }
 `;

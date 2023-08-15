@@ -9,7 +9,7 @@ export const SearchInputWrapper = styled.div`
     ${({ theme, borderRadius }) => borderRadius || theme.spacing.xxs} + 0.1rem
   );
   box-shadow: ${({ boxShadow }) => boxShadow || "none"};
-  gap: ${({ gap }) => gap || "2.5rem"};
+  gap: ${({ gap }) => gap || "1.5rem"};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +31,7 @@ export const SearchInputWrapper = styled.div`
 `;
 
 export const SearchInputStyled = styled.input`
-  color: ${({ theme }) => theme.color.gray};
+  color: ${({ theme }) => theme.color.black};
   /* width: 100%; */
   width: ${(props) => props.width || "100%"};
   /* width: 90%; */
@@ -40,13 +40,16 @@ export const SearchInputStyled = styled.input`
   background-color: ${({ theme, backgroundColor }) =>
     backgroundColor || theme.color.secondary};
   font-family: ${({ theme }) => theme.typography.fontFamily};
-  font-size: ${({ theme }) => theme.typography.fontSize.xs};
+  &::placeholder {
+  }
+  font-size: ${({ theme }) => theme.typography.fontSize.sm};
   font-style: normal;
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
   border-radius: ${({ theme, borderRadius }) =>
     borderRadius || theme.spacing.xxs};
   border: none;
   outline: none;
+  /* padding: 1rem; */
   padding-right: 1rem;
   /* @media (max-width: 620px) {
     width: 75%;
@@ -58,7 +61,7 @@ export const SearchInputStyled = styled.input`
     width: 65%;
   } */
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding-right: 1.5rem;
+    padding: 1rem;
     /* width: ${(props) => props.width || "90%"}; */
 
     font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
