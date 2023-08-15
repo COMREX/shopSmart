@@ -7,7 +7,8 @@ export const GridContainer = styled.div`
   flex-wrap: wrap;
   column-gap: 3rem;
   padding: 0 calc(${({ theme }) => theme.spacing.lg} + 0.3rem);
-  height: ${({ height }) => height || "auto"};
+  /* height: ${({ height }) => height || "auto"}; */
+  height: calc(90vh - 200px);
   margin-bottom: ${({ marginBottom }) => marginBottom || 0};
   overflow: auto;
 

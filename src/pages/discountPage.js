@@ -7,6 +7,8 @@ import useScreenWidth from "../components/utils/use-screen-width/useScreenWidth"
 import GridIcon from "../Assets/svgs/grid-icon.svg";
 import listIcon from "../Assets/svgs/listview.svg";
 import { useState } from "react";
+import DiscountListItems from "../components/discount-list-items/discountListItems";
+import { SearchContainer } from "./styles/discountPage.styles";
 
 const DiscountPage = () => {
   const screenWidth = useScreenWidth();
@@ -17,28 +19,21 @@ const DiscountPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ flexGrow: 1 }}>
       {/* <Header marginBottom="3.5rem" /> */}
       <ShopSmartHeading marginBottom="1.3rem" />
       {screenWidth >= 768 && (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "80%",
-            margin: "0 auto",
-          }}
-        >
-          <SearchInput />
+        <SearchContainer>
+          <SearchInput placeholder="Search your stores here" />
           {listView ? (
             <img src={GridIcon} alt="grid view" onClick={handleViewClick} />
           ) : (
             <img src={listIcon} alt="list view" onClick={handleViewClick} />
           )}
-        </div>
+        </SearchContainer>
       )}
-      <DiscountPageItems />
+      {listView ? <DiscountListItems /> : <DiscountPageItems />}
+
       <Navigation />
     </div>
   );
