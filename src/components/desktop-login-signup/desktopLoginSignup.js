@@ -22,9 +22,7 @@ const DesktopLoginSignup = ({ handleCross }) => {
           <DesktopSignup handleClick={handleClick} />
         </AuthMainContainer>
       </WrapperLeftSide>
-      <CancelWrapper>
-        <img src={crossImage} alt="" onClick={handleCross} />
-      </CancelWrapper>
+      <CancelWrapper src={crossImage} alt="" onClick={handleCross} />
     </DesktopLoginSignupWrapper>
   );
 };

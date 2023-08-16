@@ -10,10 +10,12 @@ export const DesktopLoginSignupWrapper = styled.div`
   overflow: hidden;
   position: relative;
 `;
-export const CancelWrapper = styled.div`
+export const CancelWrapper = styled.img`
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.25);
 `;
 export const WrapperLeftSide = styled.div`
   width: 100%;
