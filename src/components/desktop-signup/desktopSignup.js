@@ -41,7 +41,7 @@ const DesktopSignup = ({ handleCross, handleClick }) => {
             heading={"Welcome to ShopSmart"}
             paragraph={"Fill Login form below correctly"}
             headerBg={"rgba(6, 145, 154, 0.8)"}
-            height={"16rem"}
+            height={"14rem"}
           />
           <DesktopSignupForm>
             <Input
@@ -50,7 +50,7 @@ const DesktopSignup = ({ handleCross, handleClick }) => {
               name={"fname"}
               placeholder={"First Name"}
               width={"70%"}
-              height={"4rem"}
+              height={"3rem"}
               boxShadow={"1px 1px 13px 0px rgba(0, 0, 0, 0.25)"}
               value={formData.fname}
               onChange={handleChange}
@@ -61,7 +61,7 @@ const DesktopSignup = ({ handleCross, handleClick }) => {
               name={"lname"}
               placeholder={"Last Name"}
               width={"70%"}
-              height={"4rem"}
+              height={"3rem"}
               boxShadow={"1px 1px 13px 0px rgba(0, 0, 0, 0.25)"}
               value={formData.lname}
               onChange={handleChange}
@@ -72,7 +72,7 @@ const DesktopSignup = ({ handleCross, handleClick }) => {
               name={"email"}
               placeholder={"Email"}
               width={"70%"}
-              height={"4rem"}
+              height={"3rem"}
               boxShadow={"1px 1px 13px 0px rgba(0, 0, 0, 0.25)"}
               value={formData.email}
               onChange={handleChange}
@@ -83,7 +83,7 @@ const DesktopSignup = ({ handleCross, handleClick }) => {
               name={"password"}
               placeholder={"Password"}
               width={"70%"}
-              height={"4rem"}
+              height={"3rem"}
               boxShadow={"1px 1px 13px 0px rgba(0, 0, 0, 0.25)"}
               value={formData.password}
               onChange={handleChange}
@@ -97,7 +97,7 @@ const DesktopSignup = ({ handleCross, handleClick }) => {
               color={"#fff"}
               bg={(props) => props.theme.color.primary}
               width={"7.8rem"}
-              height={"3.5rem"}
+              height={"3rem"}
               fontSize={"1.2rem"}
               onClick={() => navigate("/home")}
               v

@@ -22,10 +22,10 @@ export const HeaderContent = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   img {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
   }
   @media (max-height: 440px) {
     gap: 0.5rem;
@@ -53,9 +53,9 @@ export const HeaderContent = styled.div`
 export const HeadingText = styled.div`
   color: ${(props) => props.theme.color.white};
   font-family: ${(props) => props.theme.typography.fontFamily};
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: normal;
   @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     font-size: 1.8rem;
@@ -67,8 +67,8 @@ export const HeadingText = styled.div`
 export const ParaText = styled.p`
   color: ${(props) => props.theme.color.semiWhite};
   font-family: ${(props) => props.theme.typography.fontFamily};
-  font-size: ${(props) => props.theme.typography.fontSize.xs};
-  font-weight: ${(props) => props.theme.typography.fontWeight.regular};
+  font-size: ${(props) => props.theme.typography.fontSize.xxs};
+  font-weight: ${(props) => props.theme.typography.fontWeight.light};
   @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     font-size: calc(${(props) => props.theme.typography.fontSize.xs} - 0.4rem);
   }

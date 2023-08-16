@@ -29,6 +29,7 @@ const DesktopAuthBg = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  height: "75vh",
                 }}
               >
                 <DesktopLoginSignup handleCross={handleCross} />

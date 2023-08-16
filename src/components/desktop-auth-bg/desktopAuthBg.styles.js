@@ -2,15 +2,16 @@ import { styled } from "styled-components";
 import background from "../../Assets/images/desktop-landing-background.png";
 export const LandingWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-image: url(${background});
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  margin-top: 10vh;
 `;
 export const LandingWrapperOpacity = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.56);
   display: flex;
   justify-content: center;
