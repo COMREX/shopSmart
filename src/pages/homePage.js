@@ -4,6 +4,7 @@ import Navigation from "../components/utils/navigation/navigation";
 import ShopSmartHeading from "../components/utils/shop-smart-heading/shopSmartHeading";
 import DesktopHeader from "../components/utils/desktop-header/desktopHeader";
 import { NavLI } from "../components/utils/desktop-header/desktopHeader.styles";
+import { DesktopFlex } from "./styles/homepage.styles";
 
 const HomePage = () => {
   const buttonitemss = [
@@ -13,14 +14,14 @@ const HomePage = () => {
 
   // const array = Array.from(buttonitems)
   return (
-    <div>
+    <DesktopFlex>
       {/* <Header marginBottom="3rem" /> */}
       {/* <DesktopHeader /> */}
 
       <ShopSmartHeading marginBottom="1rem" />
       <HomeItems />
       <Navigation />
-    </div>
+    </DesktopFlex>
   );
 };
 

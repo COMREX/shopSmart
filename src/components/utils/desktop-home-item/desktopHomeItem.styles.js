@@ -4,13 +4,19 @@ export const ItemWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: flex-end;
-  height: 21.4rem;
-  width: 20.4rem;
-  margin-bottom: calc(${({ theme }) => theme.spacing.sm} + 0.2rem);
+  /* height: 21.4rem;
+  width: 20.4rem; */
+  height: 19rem;
+  width: 18rem;
+  /* margin-bottom: calc(${({ theme }) => theme.spacing.sm} + 0.2rem); */
   text-align: center;
   cursor: pointer;
-  margin: auto auto;
-  flex: 0 0 25%;
+  /* flex: 0 0 25%; */
+
+  @media (min-width: 1350px) {
+    height: 21.4rem;
+    width: 20.4rem;
+  }
 `;
 
 export const BackgroundWrapper = styled.div`
@@ -33,14 +39,15 @@ export const ContentContainer = styled.div`
   transform: translateX(-50%);
   height: 90%;
   width: 100%;
+  font-size: 1.5em;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 1.8rem;
+  /* @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 1em;
 
     h4 {
       font-weight: 600;
     }
-  }
+  } */
 `;
 
 export const ImageContainer = styled.div`

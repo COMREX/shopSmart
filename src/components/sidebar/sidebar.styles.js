@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const SidebarWrapper = styled.div`
   height: 90vh;
-  width: 20vw;
+  width: 20%;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   flex: none;
