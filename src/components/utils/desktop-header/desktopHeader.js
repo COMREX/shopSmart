@@ -55,3 +55,11 @@ const DesktopHeader = () => {
 };
 
 export default DesktopHeader;
+
+export const authenticationHeader = () => {
+  return <div>isAuthenticated header</div>;
+};
+
+export const AppHeader = () => {
+  return <div>App header</div>;
+};
